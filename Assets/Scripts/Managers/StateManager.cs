@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class Goggles : MonoBehaviour
+public class StateManager : MonoBehaviour
 {
+    public InputAction playerAction;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,4 +17,14 @@ public class Goggles : MonoBehaviour
     {
         
     }
+}
+
+public enum PlayerState{
+    Dead,
+    Normal,
+    OnGoggles,
+    OnShooter,
+    OnInfoLoader,
+    Flying,
+
 }

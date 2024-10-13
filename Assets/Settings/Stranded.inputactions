@@ -24,7 +24,34 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Fire",
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "cd9ea03f-afe2-47f1-8a4f-167e8aa34267",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Crouch",
+                    "type": "Button",
+                    "id": "d0295d4b-46d0-4933-8176-71984f7b870e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Run",
+                    "type": "Button",
+                    "id": "9ac28ca2-9edc-4f9d-80de-ac7e13416e6b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "EquipScanner",
                     "type": "Button",
                     "id": "69b8b23f-ab54-4006-a205-58793f21cf72",
                     "expectedControlType": "Button",
@@ -33,9 +60,36 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Jump",
+                    "name": "EquipLogLoader",
                     "type": "Button",
-                    "id": "cd9ea03f-afe2-47f1-8a4f-167e8aa34267",
+                    "id": "bcc9ce05-12d0-4c17-8a0f-a8cc0b3fb736",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "EquipShooter",
+                    "type": "Button",
+                    "id": "b263f0eb-d404-4a5b-9375-1916e9dedda9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Shoot",
+                    "type": "Button",
+                    "id": "d1a89cb7-80f7-4c7d-b1e4-daa5865939aa",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Catch",
+                    "type": "Button",
+                    "id": "461a81df-6d50-4498-9f1c-4b73e3595719",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -210,23 +264,45 @@
                 },
                 {
                     "name": "",
+                    "id": "293de192-3d6f-4b73-8b4e-70489b7264b1",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5c393d3f-9aae-46ee-a8c8-217ac6efe709",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "EquipLogLoader",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "143bb1cd-cc10-4eca-a2f0-a3664166fe91",
                     "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Gamepad",
-                    "action": "Fire",
+                    "groups": "Gamepad",
+                    "action": "EquipScanner",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
                     "id": "05f6913d-c316-48b2-a6bb-e225f14c7960",
-                    "path": "<Mouse>/leftButton",
+                    "path": "<Keyboard>/tab",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Keyboard&Mouse",
-                    "action": "Fire",
+                    "groups": "Keyboard&Mouse",
+                    "action": "EquipScanner",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -236,8 +312,8 @@
                     "path": "<Touchscreen>/primaryTouch/tap",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Touch",
-                    "action": "Fire",
+                    "groups": "Touch",
+                    "action": "EquipScanner",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -248,7 +324,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Joystick",
-                    "action": "Fire",
+                    "action": "EquipScanner",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -259,18 +335,73 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "XR",
-                    "action": "Fire",
+                    "action": "EquipScanner",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "293de192-3d6f-4b73-8b4e-70489b7264b1",
-                    "path": "<Keyboard>/space",
+                    "id": "a4b12e93-52bd-42e0-8b9e-beeb2e0c85a6",
+                    "path": "<Keyboard>/leftShift",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Jump",
+                    "action": "Run",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ee1e3e46-b218-400a-b134-29439f4422c0",
+                    "path": "<Keyboard>/c",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Crouch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a5912e97-b634-44f0-917a-b99b6742ebec",
+                    "path": "<Keyboard>/ctrl",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Crouch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "87a42168-3866-4ffa-b24f-19b91a41c4e5",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "EquipShooter",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2877c91d-18a0-44fc-ac91-cfbcd828cc76",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1b07d3f2-e3cd-4742-999f-f443c845793a",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Catch",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
