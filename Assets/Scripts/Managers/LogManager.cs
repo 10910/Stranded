@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LogManager : MonoBehaviour
 {
+    public CompendiumSO compendium;
     // Start is called before the first frame update
     void Start()
     {

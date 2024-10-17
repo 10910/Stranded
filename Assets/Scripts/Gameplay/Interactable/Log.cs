@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Log : MonoBehaviour
 {
-    public ScriptableTextData data;
+    public LogTextSO data;
     // Start is called before the first frame update
     void Start()
     {

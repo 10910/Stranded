@@ -54,7 +54,7 @@ public class InfoLoader : MonoBehaviour
                 {
                     if (hit.collider.gameObject.layer == 8)
                     {
-                        ScriptableTextData data = hit.collider.gameObject.GetComponent<Log>().data;
+                        LogTextSO data = hit.collider.gameObject.GetComponent<Log>().data;
                         projection.text = data.texts[0];
                     }
                     else

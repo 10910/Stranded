@@ -19,12 +19,4 @@ public class StateManager : MonoBehaviour
     }
 }
 
-public enum PlayerState{
-    Dead,
-    Normal,
-    OnGoggles,
-    OnShooter,
-    OnInfoLoader,
-    Flying,
 
-}

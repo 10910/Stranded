@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb2c9e6f369d8e946983e2da39f237d3, type: 3}
+  m_Name: Unicorngroo
+  m_EditorClassIdentifier: 
+  creatureName: "\u888B\u9F20\u9A6C"
+  firstDiscoverer: 1
+  threatLevel: 1
+  discoveredState: 1
+  image: {fileID: 0}
+  sprite: {fileID: 0}
+  descriptions:
+  - "\u770B\u8D77\u6765\u50CF\u662F\u957F\u4E86\u888B\u9F20\u5C3E\u5DF4\u7684\u5DE8\u578B\u9A6C\u3002"
+  - "\u8FC4\u4ECA\u4E3A\u6B62\u8BB0\u5F55\u5230\u7684\u4F53\u578B\u6700\u5927\u7684\u7269\u79CD\u3002"
+  - "\u9A91\u5728\u5B83\u80CC\u4E0A\u7684\u666F\u8272\u4E00\u5B9A\u5F88\u58EE\u89C2\u5427\u3002
+    --\u8239\u957F"
+  descriptions__: []

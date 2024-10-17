@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class MentaRay : Creature
 {
+    private void Awake()
+    {
+    }   
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +21,6 @@ public class MentaRay : Creature
 
     public override void Use()
     {
-        Debug.Log("mentaray.use()");
+        Debug.Log("mentaRay.use()");
     }
 }
