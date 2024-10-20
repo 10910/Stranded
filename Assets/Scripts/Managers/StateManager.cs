@@ -29,7 +29,7 @@ public class StateManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        stateName = _currentState.ToString();
+        //stateName = _currentState.ToString();
         _currentState.Update();
     }
 
@@ -39,6 +39,9 @@ public class StateManager : MonoBehaviour
             _currentState = newState;
             _currentState.Enter();
         }
+    }
+
+    public void FixedUpdate() {
     }
 }
 

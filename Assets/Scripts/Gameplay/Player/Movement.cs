@@ -6,97 +6,49 @@ using UnityEngine.InputSystem;
 
 public class Movement : MonoBehaviour
 {
-    [SerializeField]
-    private Vector2 moveDir;
-    [SerializeField]
-    private bool isTop;
+    public Vector2 moveDir;
+    public bool isTop;
     public bool isGround;
-    [SerializeField]
-    private bool isCrouching;
+    public bool isCrouching;
 
-    public bool isRunning;
     [SerializeField]
     private Vector2 lookDir;
 
-    public bool isJumping;
-    public bool isFalling;
+    public bool isRunPressed;
     public bool isJumpPressed;
-    public bool canMove;
 
     public float topOffset;  //distance above player's head to block jumping
     public float bottomOffset;   //distance below player's feet to enable jumping and falling
     public float downSlopeOffset;   //distance below player's feet to considered as a downhill slope 
-    public float moveSpeed;
+    public float walkSpeed;
     public float runSpeed;
     public float crouchSpeed;
-    public float fallingMoveSpeed;
     public float gravity;
     public float velocity;
     public float lookSensX;
     public float lookSensY;
+    public float jumpInitialVelocity;
 
     public Camera childCamera;
     public CharacterController characterController;
     public MeshRenderer crouchMesh;
     public MeshRenderer standMesh;
 
-    private Vector2 JumpDir;
+    public Vector2 JumpVelocity;
+    public Vector3 moveDelta;
     void Start() {
         standMesh = GetComponent<MeshRenderer>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        jumpInitialVelocity = 5;
     }
 
     void Update() {
         isGround = characterController.isGrounded;
         isTop = isTopBlocked();
-        move();
-        rotateCamera();
-    }
-
-    public void move() {
-        //rotate character by mouseY
+        float t = Time.deltaTime;
         transform.Rotate(Vector3.up, lookDir.x * lookSensX * Time.deltaTime);
-
-        //move or run or crouch
-        Vector3 moveDelta = transform.right * moveDir.x + transform.forward * moveDir.y;
-        float speed;
-        if (isRunning) {
-            speed = runSpeed;
-        }
-        else if (isCrouching) {
-            speed = crouchSpeed;
-        }
-        else {
-            speed = moveSpeed;
-        }
-        moveDelta *= speed * Time.deltaTime;
-        
-
-        //vertical velocity
-        if(!characterController.isGrounded){
-            isFalling = true;
-        }
-        if (isJumping){
-            velocity -= Time.deltaTime * gravity * 0.8f;
-            if(velocity < 0 || isTopBlocked()) {
-                velocity = 0;
-                isJumping = false;
-                isFalling = true;
-            }
-            Vector3 verticalDelta = Vector3.up * velocity * Time.deltaTime;
-            moveDelta += verticalDelta;
-        }else if(isFalling && !characterController.isGrounded){
-            velocity -= Time.deltaTime * gravity;
-            Vector3 verticalDelta = Vector3.up * velocity * Time.deltaTime;
-            moveDelta += verticalDelta;
-        }else{
-            velocity = 0;
-            isFalling= false;
-            moveDelta += Vector3.down * 0.2f;
-            //handleSlope(ref moveDelta);
-        }
-        characterController.Move(moveDelta);
+        rotateCamera();
     }
 
     public void rotateCamera() {
@@ -116,9 +68,7 @@ public class Movement : MonoBehaviour
     }
 
     public void OnMove(InputAction.CallbackContext callbackContext) {
-        //if (canMove) {
-            moveDir = callbackContext.ReadValue<Vector2>();
-        //}
+        moveDir = callbackContext.ReadValue<Vector2>();
     }
     public void OnLook(InputAction.CallbackContext callbackContext) {
         lookDir = callbackContext.ReadValue<Vector2>();
@@ -126,9 +76,13 @@ public class Movement : MonoBehaviour
 
     public void OnJump(InputAction.CallbackContext callbackContext) {
         if (callbackContext.started && characterController.isGrounded) {
-            velocity = 5f;
-            JumpDir = moveDir;
-            isJumping = true;
+            velocity = jumpInitialVelocity;
+            JumpVelocity = transform.right * moveDir.x + transform.forward * moveDir.y;
+            if(isRunPressed){
+                JumpVelocity *= runSpeed;
+            }else{
+                JumpVelocity *= walkSpeed;
+            }
             isJumpPressed = true;
         }else{
             isJumpPressed = false;
@@ -157,20 +111,20 @@ public class Movement : MonoBehaviour
 
     public void OnRun(InputAction.CallbackContext callbackContext) {
         if (callbackContext.started && characterController.isGrounded) {
-            isRunning = true;
+            isRunPressed = true;
         }
         else if (callbackContext.canceled) {
-            isRunning = false;
+            isRunPressed = false;
         }
     }
 
-    //bool isGrounded() {
-    //    //return Physics.Raycast(transform.position, Vector3.down, characterController.height / 2 + bottomOffset);
-    //    Ray ray = new Ray(transform.position + Vector3.down * characterController.height / 4, Vector3.down);
-    //    return Physics.SphereCast(ray, 0.6f, bottomOffset);
-    //}
+    bool isGrounded() {
+        return Physics.Raycast(transform.position, Vector3.down, characterController.height / 2 + bottomOffset);
+        //Ray ray = new Ray(transform.position + Vector3.down * characterController.height / 4, Vector3.down);
+        //return Physics.SphereCast(ray, 0.2f, bottomOffset);
+    }
 
-    bool isTopBlocked() {
+    public bool isTopBlocked() {
         return Physics.Raycast(transform.position, Vector3.up, topOffset + characterController.height / 2);
     }
 
