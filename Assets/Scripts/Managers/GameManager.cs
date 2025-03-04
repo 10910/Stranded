@@ -1,0 +1,16 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class GameManager : MonoBehaviour
+{
+    public static GameManager instance;
+    public Transform FPSCamera;
+    public Shooter Shooter;
+
+    private void Awake() {
+        instance = this;
+    }
+
+    public Movement movement;
+}

@@ -10,12 +10,12 @@ public class Shooter : MonoBehaviour
     public float rayDistance;
     public RaycastHit hit;
     public LayerMask layerMask;
-    public Stack<GameObject> stored;
+    public Stack<Usable> stored;
     // Start is called before the first frame update
     void Start()
     {
         shooter.SetActive(false);
-        stored = new Stack<GameObject>();
+        stored = new Stack<Usable>();
     }
 
     // Update is called once per frame
@@ -42,21 +42,21 @@ public class Shooter : MonoBehaviour
 
     public void OnShoot(InputAction.CallbackContext context)
     {
-        GameObject gameobj;
-        if (shooter.activeSelf && context.started && stored.TryPop(out gameobj))
+        Usable shooted;
+        if (shooter.activeSelf && context.started && stored.TryPop(out shooted))
         {
-            gameobj.GetComponent<Creature>().Use();
-            Debug.Log(gameobj.tag + " shooted");
-            Destroy(gameobj);
+            shooted.GetComponent<Usable>().Use();
         }
     }
 
     public void OnCatch(InputAction.CallbackContext context){
         if (context.started && hittedgameObj)
         {
-            stored.Push(hittedgameObj);
+            //stored.Push(hittedgameObj);
             hittedgameObj.SetActive(false);
             Debug.Log(hittedgameObj.tag + " catched");
         }
     }
+
+
 }

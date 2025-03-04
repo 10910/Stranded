@@ -32,12 +32,12 @@ public class Goggles : MonoBehaviour
 
     void Update()
     {
-        if(mask.enabled){
+        if(mask.gameObject.activeSelf){
             RaycastHit hit;
             if(Physics.SphereCast(_mainCamera.transform.position, detectRadius, 
                         _mainCamera.transform.forward, out hit, detectDistance, layerMask) && 
                         hit.collider.gameObject.layer == LayerMask.NameToLayer("Creature")){
-                _hitCreatureInfo = hit.collider.GetComponent<Creature>().infoSO;
+                _hitCreatureInfo = hit.collider.GetComponent<Creature>().InfoSO;
                 textUI.text = _hitCreatureInfo.creatureName;
                 
             }

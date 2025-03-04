@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e4b93e9359b8ae14f936dcb94fc69984
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 174943
+  packageName: Time Tracker
+  packageVersion: 1.0
+  assetPath: Assets/TimeTracker/README.txt
+  uploadId: 380677
