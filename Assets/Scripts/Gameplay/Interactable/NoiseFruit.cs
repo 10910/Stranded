@@ -8,7 +8,8 @@ public class NoiseFruit : Usable, IInteractable
     public void Interact() {
         transform.SetParent(GameManager.instance.FPSCamera, false);
         //gameObject.layer = LayerMask.GetMask("Hands");
-        transform.localPosition = new Vector3(-1.57f, -2.51f, -0.89f);
+        transform.localPosition = new Vector3(0.145f, -0.089f, 0.661f);
+        transform.localEulerAngles = Vector3.zero;
         GameManager.instance.Shooter.stored.Push(this);
     }
 

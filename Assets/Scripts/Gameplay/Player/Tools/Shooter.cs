@@ -14,7 +14,7 @@ public class Shooter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        shooter.SetActive(false);
+        //shooter.SetActive(false);
         stored = new Stack<Usable>();
     }
 
@@ -35,9 +35,9 @@ public class Shooter : MonoBehaviour
     }
 
     public void OnEquipShooter(InputAction.CallbackContext context){
-        if(context.started){
-            shooter.SetActive(shooter.activeSelf ? false : true);
-        }
+        //if(context.started){
+        //    shooter.SetActive(shooter.activeSelf ? false : true);
+        //}
     }
 
     public void OnShoot(InputAction.CallbackContext context)

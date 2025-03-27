@@ -37,7 +37,8 @@ public class ParalyseFruit : Usable, IShootable, IInteractable
         print("Interact with paralyse fruit");
         transform.SetParent(FPSCamera, false);
         //gameObject.layer = LayerMask.GetMask("Hands");
-        transform.localPosition = new Vector3(-1.427f, -2.261f, -0.964f);
+        transform.localPosition = new Vector3(0.145f, -0.089f, 0.661f);
+        transform.localEulerAngles = Vector3.zero;
         Shooter.stored.Push(this);
     }
 
