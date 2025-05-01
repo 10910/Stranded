@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -27,13 +28,13 @@ public class MentaRay : Creature, IInteractable
     {
         Debug.Log("mentaRay.use()");
         deadZone.gameObject.SetActive(false);
+        GameManager.instance.PlayIntro().Forget();
     }
 
     public void Interact() {
-        //GameManager.instance.movement.gravity = 2f;
         GetComponent<MeshRenderer>().enabled = false;
         GetComponent<MeshCollider>().enabled = false;
-        shooter.stored.Push(this); //GameManager.instance.movement.gravity = 15f;
+        shooter.stored.Push(this);
     }
 
 }

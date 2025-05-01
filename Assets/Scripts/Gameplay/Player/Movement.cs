@@ -21,7 +21,8 @@ public class Movement : MonoBehaviour
     public bool isJumping;
     public bool isFalling;
     public bool isJumpPressed;
-    public bool canMove;
+    public bool canMove = true;
+    public bool canLook = true;
 
     public float topOffset;  //distance above player's head to block jumping
     public float bottomOffset;   //distance below player's feet to enable jumping and falling
@@ -42,6 +43,8 @@ public class Movement : MonoBehaviour
 
     private Vector2 JumpDir;
     void Start() {
+        canMove = true;
+        canLook = true;
         standMesh = GetComponent<MeshRenderer>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -50,14 +53,15 @@ public class Movement : MonoBehaviour
     void Update() {
         isGround = characterController.isGrounded;
         isTop = isTopBlocked();
-        move();
-        rotateCamera();
+        if (canLook){
+            look();
+        }
+        if (canMove){
+            move();
+        }
     }
 
     public void move() {
-        //rotate character by mouseY
-        transform.Rotate(Vector3.up, lookDir.x * lookSensX * Time.deltaTime);
-
         //move or run or crouch
         Vector3 moveDelta = transform.right * moveDir.x + transform.forward * moveDir.y;
         float speed;
@@ -99,7 +103,9 @@ public class Movement : MonoBehaviour
         characterController.Move(moveDelta);
     }
 
-    public void rotateCamera() {
+    public void look() {
+        //rotate character by mouseY
+        transform.Rotate(Vector3.up, lookDir.x * lookSensX * Time.deltaTime);
         //camera pitch & restrict the max degree
         float rotateDelta = lookDir.y * lookSensY * Time.deltaTime;
         float plannedRotate = childCamera.transform.localEulerAngles.x - rotateDelta;

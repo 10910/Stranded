@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
@@ -15,7 +16,8 @@ public class ParalyseFruit : Usable, IShootable, IInteractable
 
     void Start()
     {
-        
+        FPSCamera = GameManager.instance.FPSCamera;
+        Shooter = GameManager.instance.Shooter;
     }
 
     void Update()
@@ -35,6 +37,7 @@ public class ParalyseFruit : Usable, IShootable, IInteractable
     }
 
     public void Interact() {
+        GetComponent<Fruit>().tree.GrowFruit().Forget();
         print("Interact with paralyse fruit");
         transform.SetParent(FPSCamera, false);
         //gameObject.layer = LayerMask.GetMask("Hands");

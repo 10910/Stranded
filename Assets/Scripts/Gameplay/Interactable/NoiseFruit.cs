@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,7 @@ public class NoiseFruit : Usable, IInteractable
     public string InteractionText { get; set; } = "pluck";
 
     public void Interact() {
+        GetComponent<Fruit>().tree.GrowFruit().Forget();
         transform.SetParent(GameManager.instance.FPSCamera, false);
         //gameObject.layer = LayerMask.GetMask("Hands");
         transform.localPosition = new Vector3(0.145f, -0.089f, 0.661f);

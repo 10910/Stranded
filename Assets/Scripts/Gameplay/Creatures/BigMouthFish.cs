@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ public class BigMouthFish : MonoBehaviour
     public float MoveDistance = 17.0f;
     public float MoveDuration = 2.0f;
     public Transform DestPos;
+    public Transform TrapPoint;
     //public LayerMask Mask;
     // Start is called before the first frame update
     void Start()
@@ -24,16 +26,18 @@ public class BigMouthFish : MonoBehaviour
     }
 
     private async void OnTriggerEnter(Collider other) {
-        print("entered");
         if (other.gameObject.layer == LayerMask.NameToLayer("Player")) {
             print("catched");
             Destroy(Bait);
-            await Task.Delay(1000);
+            GameManager.instance.movement.canMove = false;
+            GameManager.instance.Player.DOMove(TrapPoint.position, 1.5f).SetEase(Ease.InCubic);
+            await UniTask.WaitForSeconds(1.8f);
+            GameManager.instance.movement.canMove = true;
             transform.DOMoveY(transform.position.y + MoveDistance, MoveDuration)
                 .SetEase(Ease.OutQuint)
                 .OnComplete(()=>
-                { 
-                    other.gameObject.transform.position = DestPos.position;
+                {
+                    GameManager.instance.Player.position = DestPos.position;
                     transform.DOMoveY(transform.position.y - MoveDistance, MoveDuration).SetEase(Ease.InQuint);
                 });
         }
