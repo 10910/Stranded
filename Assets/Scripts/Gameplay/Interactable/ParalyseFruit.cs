@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ParalyseFruit : Usable, IShootable, IInteractable
 {
+    public string InteractionText { get; set; } = "pluck";
     public float ShootingForce { get; set; }
     public float Velocity;
     bool _IsShooting;

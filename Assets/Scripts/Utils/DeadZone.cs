@@ -15,6 +15,7 @@ public class DeadZone : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.layer == LayerMask.NameToLayer("Player")) {
             print("player dead");
+            GameManager.instance.PlayerDie();
         }
     }
 }

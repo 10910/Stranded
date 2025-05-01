@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class NoiseFruit : Usable, IInteractable
 {
-    
+    public string InteractionText { get; set; } = "pluck";
+
     public void Interact() {
         transform.SetParent(GameManager.instance.FPSCamera, false);
         //gameObject.layer = LayerMask.GetMask("Hands");

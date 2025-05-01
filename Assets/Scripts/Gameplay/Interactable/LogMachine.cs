@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 
 public class LogMachine : MonoBehaviour, IInteractable
 {
+    public string InteractionText { get; set; } = "Open";
     public PlayerInput playerInput;
     public CompendiumUI compendiumUI;
     public GameObject projectionUI;

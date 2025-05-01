@@ -24,7 +24,7 @@ public class Shooter : MonoBehaviour
         if (shooter.activeSelf)
         {
             if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, rayDistance, layerMask)
-                    && hit.collider.gameObject.layer == 6)
+                    && (((1 << hit.collider.gameObject.layer) & layerMask.value) != 0))
             {
                 hittedgameObj = hit.collider.gameObject;
             }

@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class MentaRay : Creature, IInteractable
 {
+    public string InteractionText { get; set; } = "pick up";
+    public Shooter shooter;
+    public DeadZone deadZone;
     private void Awake()
     {
     }   
@@ -23,16 +26,14 @@ public class MentaRay : Creature, IInteractable
     public override void Use()
     {
         Debug.Log("mentaRay.use()");
+        deadZone.gameObject.SetActive(false);
     }
 
-    public async void Interact() {
-        GameManager.instance.movement.gravity = 2f;
+    public void Interact() {
+        //GameManager.instance.movement.gravity = 2f;
         GetComponent<MeshRenderer>().enabled = false;
         GetComponent<MeshCollider>().enabled = false;
-        await Task.Delay(5000);
-        GameManager.instance.movement.gravity = 15f;
-        Destroy(gameObject);
-
+        shooter.stored.Push(this); //GameManager.instance.movement.gravity = 15f;
     }
 
 }
