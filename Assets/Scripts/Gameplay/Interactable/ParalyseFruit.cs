@@ -13,6 +13,7 @@ public class ParalyseFruit : Usable, IShootable, IInteractable
     public Transform FPSCamera;
     public Shooter Shooter;
     public float ShootingDistance;
+    public float ShootingVelocity;
 
     void Start()
     {
@@ -33,6 +34,10 @@ public class ParalyseFruit : Usable, IShootable, IInteractable
         Vector3 Forward = FPSCamera.forward;
         print("shoot paralyse");
         transform.SetParent(null);
+        //var rb = GetComponent<Rigidbody>();
+        //rb.velocity = Forward * ShootingVelocity;
+        //rb.useGravity = true;
+        //rb.isKinematic = false;
         transform.DOMove(transform.position + ShootingDistance * Forward, 1.5f).OnComplete(()=>Destroy(gameObject));
     }
 

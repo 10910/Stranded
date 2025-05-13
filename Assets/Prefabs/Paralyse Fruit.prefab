@@ -2316,6 +2316,7 @@ MonoBehaviour:
   FPSCamera: {fileID: 0}
   Shooter: {fileID: 0}
   ShootingDistance: 30
+  ShootingVelocity: 0
 --- !u!114 &2250656761621411743
 MonoBehaviour:
   m_ObjectHideFlags: 0
