@@ -51,7 +51,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "EquipScanner",
+                    "name": "EquipGoggles",
                     "type": "Button",
                     "id": "69b8b23f-ab54-4006-a205-58793f21cf72",
                     "expectedControlType": "Button",
@@ -105,9 +105,27 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "ScreenShot",
+                    "name": "Snap",
                     "type": "Button",
-                    "id": "7d85da7b-43bb-4c9a-ac42-83107a597f76",
+                    "id": "b0075ca5-ca43-4522-aac8-717cdc79aaa8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Scan",
+                    "type": "Button",
+                    "id": "56fc5cd4-292e-41e8-8f3f-6d350fb39af8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "OpenTablet",
+                    "type": "Button",
+                    "id": "5e563c45-a023-4693-9cd3-f2b1f0f800d8",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -309,7 +327,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "EquipScanner",
+                    "action": "EquipGoggles",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -320,7 +338,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "EquipScanner",
+                    "action": "EquipGoggles",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -331,7 +349,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Touch",
-                    "action": "EquipScanner",
+                    "action": "EquipGoggles",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -342,7 +360,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Joystick",
-                    "action": "EquipScanner",
+                    "action": "EquipGoggles",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -353,7 +371,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "XR",
-                    "action": "EquipScanner",
+                    "action": "EquipGoggles",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -436,12 +454,34 @@
                 },
                 {
                     "name": "",
-                    "id": "dcca24f6-575e-4061-9f19-8bb53b263633",
+                    "id": "69c4841b-58d2-4bed-837e-cad87ec92bbc",
                     "path": "<Keyboard>/r",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "ScreenShot",
+                    "groups": "",
+                    "action": "Snap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "37b32392-b89c-4dee-a487-8789a54d4aea",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Scan",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ca17770e-a88d-470a-a3cc-c30ac65c538f",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpenTablet",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

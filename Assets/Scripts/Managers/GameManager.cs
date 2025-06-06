@@ -3,6 +3,7 @@ using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class GameManager : MonoBehaviour
     public Transform Player, RespawnPoint, SpawnPoint, IntroTargetPoint, BigMantaRay, MantaRayTarget, MantaRayTarget2;
     public Movement movement;
     public ParticleSystem volcanoBurst;
+    public PlayerInput input;
 
     private void Awake() {
         instance = this;

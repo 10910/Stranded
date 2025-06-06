@@ -9,13 +9,14 @@ using UnityEngine.UI;
 public class Goggles : MonoBehaviour
 {
     public Image mask;
-    public TextMeshProUGUI textUI;
+    public TextMeshProUGUI nameTMP, infoTMP;
     public float detectRadius;
     public float detectDistance;
     public CompendiumSO compendium;
     public LayerMask layerMask;
     public int captureWidth;
     public Texture2D tex;
+    public GameObject scanKeyPrompt, snapKeyPrompt;
 
 
     private Camera _mainCamera;
@@ -35,20 +36,36 @@ public class Goggles : MonoBehaviour
         if(mask.gameObject.activeSelf){
             RaycastHit hit;
             if(Physics.SphereCast(_mainCamera.transform.position, detectRadius, 
-                        _mainCamera.transform.forward, out hit, detectDistance, layerMask) && 
-                        hit.collider.gameObject.layer == LayerMask.NameToLayer("Creature")){
+                        _mainCamera.transform.forward, out hit, detectDistance, layerMask) &&
+                        hit.collider.GetComponent<Creature>()) {
                 _hitCreatureInfo = hit.collider.GetComponent<Creature>().InfoSO;
-                textUI.text = _hitCreatureInfo.creatureName;
-                
+                if (_hitCreatureInfo.discoveredState == DiscoveryState.Undiscovered){
+                    nameTMP.text = "???";
+                    infoTMP.text = "";
+                    scanKeyPrompt.SetActive(true);
+                    snapKeyPrompt.SetActive(false);
+                }else{
+                    nameTMP.text = _hitCreatureInfo.creatureName;
+                    string description = "";
+                    foreach (string desc in _hitCreatureInfo.descriptions){
+                        description += desc + "\n";
+                    }
+                    infoTMP.text = description;
+                    scanKeyPrompt.SetActive(false);
+                    snapKeyPrompt.SetActive(true);
+                }
             }
             else{
-                textUI.text = null;
+                nameTMP.text = "";
+                infoTMP.text = "";
                 _hitCreatureInfo = null;
+                scanKeyPrompt.SetActive(false);
+                snapKeyPrompt.SetActive(true);
             }
         }
     }
 
-    public void OnScan(InputAction.CallbackContext context){
+    public void OnGoggles(InputAction.CallbackContext context){
         if(context.started){
             //add animation judgement
             if (!mask.gameObject.activeSelf)
@@ -60,7 +77,14 @@ public class Goggles : MonoBehaviour
         }
     }
 
-    public void OnScreenShot(InputAction.CallbackContext context){
+    public void OnScan(InputAction.CallbackContext context) {
+        if (context.started && _hitCreatureInfo != null && _hitCreatureInfo.discoveredState == DiscoveryState.Undiscovered) {
+            print($"{_hitCreatureInfo.creatureName} scanned");
+            _hitCreatureInfo.discoveredState = DiscoveryState.Completed;
+        }
+    }
+
+    public void OnSnap(InputAction.CallbackContext context){
         if (context.started && _hitCreatureInfo != null) {
             StartCoroutine(Capture(_hitCreatureInfo));
         }

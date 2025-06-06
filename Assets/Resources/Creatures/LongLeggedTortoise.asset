@@ -10,18 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb2c9e6f369d8e946983e2da39f237d3, type: 3}
-  m_Name: Test 2
+  m_Name: LongLeggedTortoise
   m_EditorClassIdentifier: 
-  creatureName: 222
+  creatureName: Long-legged Tortoise
   firstDiscoverer: 4
-  threatLevel: 1
+  threatLevel: 0
   discoveredState: 3
-  image:
-    value: {fileID: 0}
-    isAvailable: 0
-    isViewed: 0
+  imageTex: {fileID: 0}
+  sprite: {fileID: 0}
   descriptions:
-  - 222
-  - 22222222222
-  - 222222222
+  - Its shell is hard enough to step on
+  - Is fond of Red Fruit
+  - Retreats into its shell when startled by loud noises
   descriptions__: []
