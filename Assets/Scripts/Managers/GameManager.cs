@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     public Movement movement;
     public ParticleSystem volcanoBurst;
     public PlayerInput input;
-
+    public GameObject crosshair;
     private void Awake() {
         instance = this;
     }

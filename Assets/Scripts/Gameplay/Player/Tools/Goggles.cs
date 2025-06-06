@@ -67,12 +67,15 @@ public class Goggles : MonoBehaviour
 
     public void OnGoggles(InputAction.CallbackContext context){
         if(context.started){
-            //add animation judgement
             if (!mask.gameObject.activeSelf)
             {
+                // open
                 mask.gameObject.SetActive(true);
+                GameManager.instance.crosshair.SetActive(false);
             }else{
+                // close
                 mask.gameObject.SetActive(false);
+                GameManager.instance.crosshair.SetActive(true);
             }
         }
     }
@@ -86,6 +89,7 @@ public class Goggles : MonoBehaviour
 
     public void OnSnap(InputAction.CallbackContext context){
         if (context.started && _hitCreatureInfo != null) {
+            print($"{_hitCreatureInfo.creatureName} snapped");
             StartCoroutine(Capture(_hitCreatureInfo));
         }
     }
@@ -93,7 +97,9 @@ public class Goggles : MonoBehaviour
     IEnumerator Capture(CreatureInfoSO info){
         yield return new WaitForEndOfFrame();
         tex = ScreenCapture.CaptureScreenshotAsTexture();
-        compendium.SaveImage(CropTexture(tex), info.creatureName);
+        //compendium.SaveImage(CropTexture(tex), info.creatureName);
+        info.imageTex = CropTexture(tex);
+        print($"{_hitCreatureInfo.creatureName} image saved");
     }
 
     Texture2D CropTexture(Texture2D tex) {

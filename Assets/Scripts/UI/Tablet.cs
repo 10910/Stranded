@@ -6,10 +6,11 @@ using UnityEngine.UI;
 
 public class Tablet : MonoBehaviour
 {
+    public CompendiumUI compendiumUI;
     // Start is called before the first frame update
     void Start()
     {
-        
+        compendiumUI.CreateButtons();
     }
 
     // Update is called once per frame
@@ -25,7 +26,7 @@ public class Tablet : MonoBehaviour
                 Cursor.visible = false;
                 Time.timeScale = 1f;
                 gameObject.SetActive(false);
-                GameManager.instance.input.SwitchCurrentActionMap("Player");
+                //GameManager.instance.input.SwitchCurrentActionMap("Player");
             }
             else{
                 // open panel, stop time, switch to ui input map, show cursor
@@ -33,7 +34,7 @@ public class Tablet : MonoBehaviour
                 Cursor.visible = true;
                 Time.timeScale = 0;
                 gameObject.SetActive(true);
-                GameManager.instance.input.SwitchCurrentActionMap("UI");
+                //GameManager.instance.input.SwitchCurrentActionMap("UI");
             }
         }
     }

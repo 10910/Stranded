@@ -12,8 +12,15 @@ public class CompendiumSO : ScriptableObject
     public string imagesDirPath;
     private void OnEnable()
     {
-        creatures = new Dictionary<string, CreatureInfoSO>();
+        // load creatureSO from Creatures folder
         creaturesArray = Resources.LoadAll<CreatureInfoSO>("Creatures");
+        // TEST ONLY: set all creature's discovery state to undiscovered
+        foreach (CreatureInfoSO creature in creaturesArray){
+            creature.discoveredState = DiscoveryState.Undiscovered;
+        }
+
+        creatures = new Dictionary<string, CreatureInfoSO>();
+        // load creature images
         foreach(var creature in creaturesArray){
             string filePath = imagesDirPath + creature.name + ".png";
             if (File.Exists(filePath))

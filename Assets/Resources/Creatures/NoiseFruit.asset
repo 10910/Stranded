@@ -10,16 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb2c9e6f369d8e946983e2da39f237d3, type: 3}
-  m_Name: LongLeggedTortoise
+  m_Name: NoiseFruit
   m_EditorClassIdentifier: 
-  creatureName: Long-legged Tortoise
-  firstDiscoverer: 4
-  threatLevel: 0
+  creatureName: Echo Fruit
+  firstDiscoverer: 5
+  threatLevel: 2
   discoveredState: 3
   imageTex: {fileID: 0}
   sprite: {fileID: 0}
   descriptions:
-  - Its shell is hard enough to step on
-  - Retreats into its shell when startled by loud noises
-  - Is fond of Red Fruit
+  - Can produce a loud noise when struck
   descriptions__: []
