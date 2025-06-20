@@ -27,19 +27,38 @@ public class BigMouthFish : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other) {
+    private async void OnTriggerEnter(Collider other) {
         if (other.gameObject.layer == LayerMask.NameToLayer("Player")) {
-            print("catched");
+            Vector3 pos = transform.position;
+            var collider = GetComponent<Collider>();
+            collider.enabled = false;
+            print("catched player" + other.name);
             Destroy(Bait);
             //GetComponent<CapsuleCollider>().enabled = false;
-            //GameManager.instance.movement.canMove = false;
+            GameManager.instance.movement.canMove = false;
+            
             Sequence seq = DOTween.Sequence();
             seq.Append(GameManager.instance.Player.DOMove(TrapPoint.position, 1.5f).SetEase(Ease.InCubic))
                 .AppendInterval(0.5f)
                 //.AppendCallback(() => GameManager.instance.movement.canMove = true)
-                .Append(transform.DOMoveY(transform.position.y + MoveDistance, MoveDuration).SetEase(Ease.OutQuint))
-                .AppendCallback(() => GameManager.instance.Player.position = DestPos.position)
-                .Append(transform.DOMoveY(transform.position.y, MoveDuration).SetEase(Ease.InQuint));
+                .Append(transform.DOMoveY(transform.position.y + 8f, MoveDuration).SetEase(Ease.OutQuint));
+            await UniTask.WaitForSeconds(MoveDuration + 2.1f);
+            if (GameManager.instance.playerState.isProtected) {
+                // move to the cave
+                print("protected by scallop");
+                GameManager.instance.Player.position = DestPos.position;
+            }
+            else {
+                // player is eaten
+                print("eaten by fish");
+                //seq.AppendCallback(() => GameManager.instance.PlayerDie());
+                GameManager.instance.PlayerDie();
+            }
+            //seq.Append(transform.DOMoveY(transform.position.y, MoveDuration).SetEase(Ease.InQuint));
+            await UniTask.WaitForSeconds(MoveDuration + 0.1f);
+            transform.position = pos; 
+            collider.enabled = true; 
+            GameManager.instance.movement.canMove = true;
         }
         if (other.gameObject.layer == LayerMask.NameToLayer("Creature")) {
             print("catched animal");

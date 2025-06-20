@@ -26,6 +26,7 @@ public class AnimalAI : MonoBehaviour
     public Vector3 wanderCenter;
     public float currentIdleDuration = 0f;
     public bool isCanceled = false;
+    public bool shouldPrintDebug;
 
     private float idleTimer;
     private NavMeshAgent agent;
@@ -63,9 +64,6 @@ public class AnimalAI : MonoBehaviour
                 HandleEatState();
                 break;
         }
-
-        // 在 Update 中可以添加状态转换的逻辑
-        //CheckForStateTransitions();
     }
 
     private void OnDrawGizmos() {
@@ -106,14 +104,14 @@ public class AnimalAI : MonoBehaviour
             Vector3 targetPos = target.position + dir.normalized * 3f; //body length
             agent.SetDestination(targetPos);
             if (!agent.pathPending && agent.remainingDistance < 0.01f) {
-                print("food chased, start eating");
+                if(shouldPrintDebug) print("food chased, start eating");
                 currentState = AnimalState.Eat;
                 agent.isStopped = true;
 
                 await UniTask.WaitForSeconds(5f);
                 if (!isCanceled) {
                     Destroy(target.gameObject);
-                    print("food eaten, start idling");
+                    if (shouldPrintDebug) print("food eaten, start idling");
                     currentState = AnimalState.Idle;
                     currentIdleDuration = Random.Range(2f, 3f);
                     idleTimer = 0f;
@@ -122,7 +120,7 @@ public class AnimalAI : MonoBehaviour
         }
         else
         {
-            print("target loss, start wandering");
+            if (shouldPrintDebug) print("target loss, start wandering");
             currentState = AnimalState.Wander;
         }
     }
@@ -166,7 +164,7 @@ public class AnimalAI : MonoBehaviour
 
         foreach (Collider hitCollider in hitColliders) {
             if (hitCollider.GetComponent<TurtleFruit>() && hitCollider.gameObject.layer == LayerMask.NameToLayer("Environment")) {
-                print("found food: " + hitCollider.gameObject.name);
+                if (shouldPrintDebug) print("found food: " + hitCollider.gameObject.name);
                 float distanceSqr = (transform.position - hitCollider.transform.position).sqrMagnitude;
                 if (distanceSqr < closestDistanceSqr) {
                     closestDistanceSqr = distanceSqr;
@@ -176,13 +174,13 @@ public class AnimalAI : MonoBehaviour
         }
 
         if (closestTarget != null) {
-            print("food found, start chasing");
+            if (shouldPrintDebug) print("food found, start chasing");
             target = closestTarget;
             currentState = AnimalState.Chase;
             agent.isStopped = false;
         }
         else {
-            print("food not found, start wandering");
+            if (shouldPrintDebug) print("food not found, start wandering");
             currentState = AnimalState.Wander;
             agent.isStopped = false;
             SetNewWanderDestination();

@@ -24,7 +24,7 @@ public class HighTurtle : Creature
         
     }
 
-    public async void RetreatShell(){
+    public void RetreatShell(){
         var state = GetComponent<AnimalAI>();
         if (state != null ){
             state.currentState = AnimalState.Eat;

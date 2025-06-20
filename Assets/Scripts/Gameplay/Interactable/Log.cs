@@ -16,7 +16,7 @@ public class Log : MonoBehaviour, IInteractable
     // Start is called before the first frame update
     void Start()
     {
-        tablet = FindFirstObjectByType<Tablet>();
+        tablet = FindFirstObjectByType<Tablet>(FindObjectsInactive.Include);
     }
 
     // Update is called once per frame

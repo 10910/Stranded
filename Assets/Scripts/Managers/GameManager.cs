@@ -4,25 +4,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public Transform FPSCamera;
-    public Shooter Shooter;
-    public GameObject DeathUI;
-    public Transform Player, RespawnPoint, SpawnPoint, IntroTargetPoint, BigMantaRay, MantaRayTarget, MantaRayTarget2;
+    public Shooter shooter;
+    public GameObject deathUI;
+    public Transform Player, RespawnPoint, IntroTargetPoint, BigMantaRay, MantaRayTarget, MantaRayTarget2;
+    public List<Transform> spawnPoints;
+    [Range(0, 5)]
+    public int spawnPointIndex;
     public Movement movement;
     public ParticleSystem volcanoBurst;
     public PlayerInput input;
     public GameObject crosshair;
+    public PlayerState playerState;
+    public Image blackScreen;
     private void Awake() {
         instance = this;
     }
 
     private void Start() {
+        if(spawnPointIndex >= spawnPoints.Count){
+            throw new System.ArgumentOutOfRangeException("spawnPointIndex");
+        }
         //DeathUI.SetActive(false);
-        Player.position = SpawnPoint.position;
+        Player.position = spawnPoints[spawnPointIndex].position;
         //PlayIntro().Forget();
     }
 
@@ -36,7 +45,7 @@ public class GameManager : MonoBehaviour
     public void PlayerDie(){
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        DeathUI.SetActive(true);
+        deathUI.SetActive(true);
         movement.enabled = false;
     }
 

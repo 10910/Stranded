@@ -16,17 +16,17 @@ public abstract class State
 
 }
 
-public enum PlayerState
-{
-    Dead,
-    Grounded,
-    Jumping,
-    OnGoggles,
-    OnShooter,
-    OnInfoLoader,
-    Flying,
+//public enum PlayerState
+//{
+//    Dead,
+//    Grounded,
+//    Jumping,
+//    OnGoggles,
+//    OnShooter,
+//    OnInfoLoader,
+//    Flying,
 
-}
+//}
 public enum GameState
 {
     StartMenu,

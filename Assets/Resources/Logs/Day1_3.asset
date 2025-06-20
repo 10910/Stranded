@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Day1_3
   displayTitle: Day1_3
-  isViewed: 0
+  isViewed: 1
   texts:
   - key: body
     text: "Captain: There's an energy reading near the volcano. I\u2019ll head there.

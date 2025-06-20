@@ -18,7 +18,7 @@ public class TurtleFruit : Usable, IShootable, IInteractable
     void Start()
     {
         FPSCamera = GameManager.instance.FPSCamera;
-        Shooter = GameManager.instance.Shooter;
+        Shooter = GameManager.instance.shooter;
     }
 
     void Update()
