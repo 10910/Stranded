@@ -8,6 +8,7 @@ public class NoiseFruit : Usable, IInteractable
     public string InteractionText { get; set; } = "pluck";
 
     public void Interact() {
+        gameObject.layer = LayerMask.NameToLayer("Default");
         GetComponent<Fruit>().tree.GrowFruit().Forget();
         transform.SetParent(GameManager.instance.FPSCamera, false);
         //gameObject.layer = LayerMask.GetMask("Hands");

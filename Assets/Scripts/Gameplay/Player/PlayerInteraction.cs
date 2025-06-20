@@ -57,9 +57,9 @@ public class PlayerInteraction : MonoBehaviour
             if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, rayDistance, hitLayerMask)){
                 if(hit.collider.gameObject.layer == LayerMask.NameToLayer("Interactable")){
                     hit.collider.GetComponent<IInteractable>().Interact();
-                    promptUI.SetActive(false);
-                    promptText.setText(null);
-                    hit.collider.gameObject.layer = LayerMask.NameToLayer("Default");
+                    //promptUI.SetActive(false);
+                    //promptText.setText(null);
+                    //hit.collider.gameObject.layer = LayerMask.NameToLayer("Default");
                 }
             }
         }
