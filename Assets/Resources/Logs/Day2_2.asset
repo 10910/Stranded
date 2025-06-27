@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bad5fa0116e5ef409745a7fb3daa1aa, type: 3}
+  m_Name: Day2_2
+  m_EditorClassIdentifier: 
+  title: Day2_2
+  displayTitle: Day2_2
+  isViewed: 0
+  texts:
+  - key: body
+    text: "Assistant: Wow, look at those things flying in the sky!\nProfessor: Please
+      take a photo for the record.\nAssistant: Got it! I wish I could float around
+      in the air like them\u2026\nProfessor: Alright, calm down. Let\u2019s assess
+      our current situation: we need to find a way down the cliff.\nRecorder: Professor,
+      can you hear me?\nProfessor: Go ahead.\nRecorder: The captain told me earlier
+      how to get down. It involves using those... things in the sky.\nRecorder: 
+      First, you need to find some yellow fruit nearby, and then\u2026\nProfessor:
+      No need to say more\u2014I know what to do. That guy sure has an imagination.\nAssistant:
+      The gravity here feels about the same as New Earth. So boring!"

@@ -9,9 +9,11 @@ public class Scallop : Creature, IInteractable
     public Vector3 rotationAngle;
     public float rotationDuration;
     public Transform jaw;
+    public bool isEaten = false;
     public void Interact() {
+        jaw.gameObject.SetActive(false);
         GetComponent<MeshRenderer>().enabled = false;
-        GetComponent<MeshCollider>().enabled = false;
+        GetComponent<Collider>().enabled = false;
         GameManager.instance.shooter.stored.Push(this);
     }
 
@@ -22,7 +24,6 @@ public class Scallop : Creature, IInteractable
     // Start is called before the first frame update
     void Start()
     {
-        Eaten();
     }
 
     // Update is called once per frame
@@ -32,6 +33,8 @@ public class Scallop : Creature, IInteractable
     }
 
     public void Eaten(){
+        print(name + " is eaten");
+        isEaten = true;
         gameObject.layer = LayerMask.NameToLayer("Interactable");
         jaw.DOLocalRotate(jaw.localEulerAngles + rotationAngle, rotationDuration);
     }

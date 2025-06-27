@@ -32,9 +32,26 @@ public class MentaRay : Creature, IInteractable
     }
 
     public void Interact() {
-        GetComponent<MeshRenderer>().enabled = false;
-        GetComponent<MeshCollider>().enabled = false;
+        GetComponentInChildren<MeshRenderer>().enabled = false;
+        GetComponent<Collider>().enabled = false;
         shooter.stored.Push(this);
     }
 
+    private void OnTriggerEnter(Collider other) {
+        if (other.gameObject.GetComponent<ParalyseFruit>() != null) {
+            var ai = GetComponent<RayAI>();
+            gameObject.GetComponent<Rigidbody>().useGravity = true;
+            gameObject.GetComponent<Rigidbody>().isKinematic = false;
+            //transform.DOMoveY(transform.position.y - 3f, 2f);
+            if (ai.IsHoldingFood()){
+                var food = ai.GetHoldingFood();
+                var rb = food.GetComponent<Rigidbody>();
+                rb.isKinematic = true;
+                rb.useGravity = true;
+            }
+            Destroy(ai);
+            Destroy(other.gameObject);
+            gameObject.layer = LayerMask.NameToLayer("Interactable");
+        }
+    }
 }

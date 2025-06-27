@@ -1,23 +1,12 @@
 using Cysharp.Threading.Tasks;
+using DG.Tweening;
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-
-public enum AnimalState
+public class RayAI : MonoBehaviour
 {
-    Wander,
-    Chase,
-    Eat,
-    Flee,
-    Idle,
-    Paraylsed
-}
-public class AnimalAI : MonoBehaviour
-{
-
-
     public AnimalState currentState = AnimalState.Wander;
     public float wanderRadius = 10f;
     public float detectionRadius = 12f;
@@ -31,9 +20,13 @@ public class AnimalAI : MonoBehaviour
 
     private float idleTimer;
     private NavMeshAgent agent;
-    private Transform target; // 可选：追逐目标
-    private Transform threat; // 可选：逃跑威胁
+    private Transform target;
 
+    public Transform fruitHeldPos;
+    public float hungryInterval = 5f;
+    public float hungryTimer;   // only after it count down to 0, the creature can detect and chase food
+    public float eatDuration = 7f;
+    public bool finishEating = true;
 
     void Start() {
         wanderCenter = transform.position;
@@ -44,10 +37,24 @@ public class AnimalAI : MonoBehaviour
             return;
         }
         idleTimer = 0f;
+        //eatTimer = 0f;
+        hungryTimer = hungryInterval;
         SetNewWanderDestination();
     }
 
     void Update() {
+        if (hungryTimer > 0f) {
+            hungryTimer -= Time.deltaTime;
+        }else if (hungryTimer < 0f){
+            hungryTimer = 0f;
+        }
+
+        //if (eatTimer > 0f) {
+        //    eatTimer -= Time.deltaTime;
+        //} else if (eatTimer <= 0f && target != null && currentState != AnimalState.Chase) {
+        //    Destroy(target.gameObject);
+        //    hungryTimer = hungryInterval;
+        //}
         switch (currentState) {
             case AnimalState.Wander:
                 HandleWanderState();
@@ -55,9 +62,9 @@ public class AnimalAI : MonoBehaviour
             case AnimalState.Chase:
                 HandleChaseState();
                 break;
-            case AnimalState.Flee:
-                HandleFleeState();
-                break;
+            //case AnimalState.Flee:
+            //    HandleFleeState();
+            //    break;
             case AnimalState.Idle:
                 HandleIdleState();
                 break;
@@ -99,7 +106,6 @@ public class AnimalAI : MonoBehaviour
     }
 
     async void HandleChaseState() {
-        
         if (target != null && agent != null && agent.isOnNavMesh) {
             Vector3 dir = transform.position - target.position;
             Vector3 targetPos = target.position + dir.normalized * 3f; //body length
@@ -108,15 +114,34 @@ public class AnimalAI : MonoBehaviour
                 if(shouldPrintDebug) print("food chased, start eating");
                 currentState = AnimalState.Eat;
                 agent.isStopped = true;
+                finishEating = false;
 
-                await UniTask.WaitForSeconds(5f);
+                await UniTask.WaitForSeconds(2f);
+                if (!isCanceled) {
+                    // move fruit to antenna, restart hungry timer
+                    if (shouldPrintDebug) print("food eaten, start idling");
+                    target.GetComponent<NoiseFruit>().Eat();
+                    target.SetParent(fruitHeldPos);
+                    target.localPosition = Vector3.zero;
+                    //eatTimer = eatDuration;
+
+                    currentState = AnimalState.Idle;
+                    currentIdleDuration = Random.Range(1f, 2f);
+                    idleTimer = 0f;
+                }else{
+                    return;
+                }
+                
+
+                await UniTask.WaitForSeconds(eatDuration);
                 if (!isCanceled) {
                     Destroy(target.gameObject);
-                    if (shouldPrintDebug) print("food eaten, start idling");
-                    currentState = AnimalState.Idle;
-                    currentIdleDuration = Random.Range(2f, 3f);
-                    idleTimer = 0f;
+                    hungryTimer = hungryInterval;
+                    finishEating = true;
+                }else{
+                    return;
                 }
+                
             }
         }
         else
@@ -131,60 +156,63 @@ public class AnimalAI : MonoBehaviour
     }
 
     void HandleFleeState() {
-        if (threat != null && agent != null && agent.isOnNavMesh) {
-            Vector3 fleeDirection = (transform.position - threat.position).normalized * wanderRadius; // 使用 wanderRadius 作为逃跑距离
-            Vector3 fleeTarget = transform.position + fleeDirection;
-            NavMeshHit hit;
-            if (NavMesh.SamplePosition(fleeTarget, out hit, wanderRadius, NavMesh.AllAreas)) {
-                agent.SetDestination(hit.position);
-            }
-            else {
-                // 如果找不到逃跑点，可以尝试随机移动
-                SetNewWanderDestination();
-            }
-        }
-        else {
-            // 威胁丢失或无法导航，切换回游荡
-            currentState = AnimalState.Wander;
-        }
+        
     }
 
     void HandleIdleState() {
         agent.isStopped = true;
         idleTimer += Time.deltaTime;
         if (idleTimer >= currentIdleDuration) {
-            DetectFood();
+            DetectNextDest();
             idleTimer = 0f;
         }
     }
 
-    void DetectFood() {
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position, detectionRadius);
-        Transform closestTarget = null;
-        float closestDistanceSqr = Mathf.Infinity;
+    void DetectNextDest() {
+        if(hungryTimer == 0 && finishEating){
+            Collider[] hitColliders = Physics.OverlapSphere(transform.position, detectionRadius);
+            Transform closestTarget = null;
+            float closestDistanceSqr = Mathf.Infinity;
 
-        foreach (Collider hitCollider in hitColliders) {
-            if (hitCollider.GetComponent<TurtleFruit>() && hitCollider.gameObject.layer == LayerMask.NameToLayer("Environment")) {
-                if (shouldPrintDebug) print("found food: " + hitCollider.gameObject.name);
-                float distanceSqr = (transform.position - hitCollider.transform.position).sqrMagnitude;
-                if (distanceSqr < closestDistanceSqr) {
-                    closestDistanceSqr = distanceSqr;
-                    closestTarget = hitCollider.transform;
+            foreach (Collider hitCollider in hitColliders) {
+
+                if (hitCollider.GetComponent<NoiseFruit>()) {
+                    if (shouldPrintDebug) print("found food: " + hitCollider.gameObject.name);
+                    float distanceSqr = (transform.position - hitCollider.transform.position).sqrMagnitude;
+                    float vDistance = Mathf.Abs(transform.position.y - hitCollider.transform.position.y);
+                    if (vDistance < 2f && distanceSqr < closestDistanceSqr) {
+                        closestDistanceSqr = distanceSqr;
+                        closestTarget = hitCollider.transform;
+                    }
                 }
             }
+
+            if (closestTarget != null) {
+                if (shouldPrintDebug) print("food found, start chasing");
+                target = closestTarget;
+                currentState = AnimalState.Chase;
+                agent.isStopped = false;
+                return;
+            }
+
         }
 
-        if (closestTarget != null) {
-            if (shouldPrintDebug) print("food found, start chasing");
-            target = closestTarget;
-            currentState = AnimalState.Chase;
-            agent.isStopped = false;
-        }
-        else {
-            if (shouldPrintDebug) print("food not found, start wandering");
-            currentState = AnimalState.Wander;
-            agent.isStopped = false;
-            SetNewWanderDestination();
-        }
+        if (shouldPrintDebug) print("food not found, start wandering");
+        currentState = AnimalState.Wander;
+        agent.isStopped = false;
+        SetNewWanderDestination();
+    }
+
+    public bool IsHoldingFood(){
+        return !finishEating && target != null;
+    }
+
+    public Transform GetHoldingFood(){
+        return target;
+    }
+
+    private void OnDestroy() {
+        isCanceled = true;
+        Destroy(agent);
     }
 }

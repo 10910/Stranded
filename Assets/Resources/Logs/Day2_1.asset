@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bad5fa0116e5ef409745a7fb3daa1aa, type: 3}
+  m_Name: Day2_1
+  m_EditorClassIdentifier: 
+  title: Day2_1
+  displayTitle: Day2_1
+  isViewed: 0
+  texts:
+  - key: body
+    text: "Captain: There's an energy reading near the volcano. I\u2019ll head there.
+      You all continue your assigned tasks.\nAssistant: It\u2019s too dangerous to
+      go alone!\nProfessor: No objections from me.\nCaptain: We still have the recorder
+      to keep us connected. The ship\u2019s failure was my responsibility. I\u2019ll
+      find us fuel.\nRecorder: I\u2019ll sync all your collected data to the log
+      system. Don\u2019t forget to check your tablets."

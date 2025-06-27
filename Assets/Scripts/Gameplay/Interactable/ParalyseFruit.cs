@@ -52,6 +52,12 @@ public class ParalyseFruit : Usable, IShootable, IInteractable
         Shooter.stored.Push(this);
     }
 
+    public async void Eat(){
+        GetComponent<Fruit>().tree.GrowFruit().Forget();
+        //await UniTask.WaitForSeconds(5f);
+        //Destroy(gameObject);
+    }
+
     private void OnCollisionEnter(Collision collision) {
         if(collision.gameObject.layer == LayerMask.NameToLayer("Creature")) {
             print("hit" + collision.gameObject.GetComponent<Creature>().name);
