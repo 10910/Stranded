@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bad5fa0116e5ef409745a7fb3daa1aa, type: 3}
+  m_Name: TurtleHint
+  m_EditorClassIdentifier: 
+  title: TurtleHint
+  displayTitle: Day3_1
+  isViewed: 1
+  texts:
+  - key: body
+    text: "Professor: This step is too high for us to climb.\nAssistant: And it looks
+      like that flying creature isn\u2019t around either...\n[Loud Noise]\nAssistant:
+      Whoa! Wh-what was that...? Professor, are you okay!?\nProfessor: I\u2019m fine\u2014I
+      caused it. Seems this fruit can make a really loud noise.\nProfessor: Maybe
+      we can use it to scare off aggressive creatures.\nAssistant: You scared off
+      more than just the aggressive ones...\nProfessor: You\u2019re right. Look over
+      there\u2014the turtle. I think we\u2019ve found our way to the platform.\nAssistant:
+      That\u2019s not what I meant..."

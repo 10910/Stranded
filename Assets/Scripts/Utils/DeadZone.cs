@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DeadZone : MonoBehaviour
 {
-    public Transform RespawnPos;
+    public string deadText;
     // Start is called before the first frame update
     void Start()
     {
@@ -12,10 +12,10 @@ public class DeadZone : MonoBehaviour
     }
 
     // Update is called once per frame
-    private void OnTriggerEnter(Collider other) {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Player")) {
+    private void OnTriggerEnter(Collider collider) {
+        if (collider.gameObject.layer == LayerMask.NameToLayer("Player")) {
             print("player dead");
-            GameManager.instance.PlayerDie();
+            GameManager.instance.PlayerDie(deadText);
         }
     }
 }

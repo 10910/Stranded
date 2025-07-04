@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bad5fa0116e5ef409745a7fb3daa1aa, type: 3}
+  m_Name: RiverHint
+  m_EditorClassIdentifier: 
+  title: RiverHint
+  displayTitle: Day7_1
+  isViewed: 0
+  texts:
+  - key: body
+    text: "Captain: Stay away from the river! That water is deadly to us.\nAssistant:
+      But it looks like there\u2019s no other way forward.\nRecorder: I just received
+      a photo from the Professor\u2014she captured a turtle drinking the water. It
+      seems harmless to the native creatures. Maybe we can use that to our advantage.\nCaptain:
+      The turtle... Haha, I\u2019ve got an idea. Assistant, let\u2019s go back and
+      grab some of its favorite fruit.\nAssistant: I get it! The carrot and the stick!"

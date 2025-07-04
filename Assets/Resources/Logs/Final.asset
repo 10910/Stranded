@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bad5fa0116e5ef409745a7fb3daa1aa, type: 3}
+  m_Name: Final
+  m_EditorClassIdentifier: 
+  title: Final
+  displayTitle: Day20_1
+  isViewed: 0
+  texts:
+  - key: body
+    text: "Assistant: Hey, I want to go lie down on the mountaintop. Want to come?\nRecorder:
+      Sure.\nAssistant: It\u2019s kind of ironic, huh? After searching for over 10
+      days, we\u2019ve come full circle\u2026 and the Professor is still\u2026\nRecorder:
+      I\u2019m really sad too\u2026 but at least there\u2019s still hope. The Captain\u2019s
+      still out there looking for a way, right?\nAssistant: I\u2019m afraid the Captain\u2019s
+      the one taking it the hardest\u2026 after all, she was his ex-wife.\nRecorder:
+      Wait\u2026 huh???\nAssistant: Oh, you didn\u2019t know?\nRecorder: How is that
+      possible? The Professor always acted so cold toward him!\nAssistant: That\u2019s
+      why she\u2019s the ex-wife. But I could still feel a connection between them.\nRecorder:
+      I just can\u2019t imagine it\u2026 those two seemed worlds apart.\nAssistant:
+      The Captain still has feelings for her. Otherwise, he wouldn\u2019t have taken
+      such a huge risk piloting this ship."

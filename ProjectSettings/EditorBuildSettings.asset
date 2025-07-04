@@ -8,8 +8,11 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/EarlyPrototype.unity
     guid: dc3999168490aa241a8fc63702aa497f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PlayTest0.1.unity
     guid: e99e5f14d84713f4abaa1359d583c59c
+  - enabled: 1
+    path: Assets/Scenes/PuzzlePlaytest.unity
+    guid: a13850af8ad36284eafc1780d6c9e7f0
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

@@ -167,12 +167,12 @@ public class Movement : MonoBehaviour
     }
 
     public void OnRun(InputAction.CallbackContext callbackContext) {
-        if (callbackContext.started && characterController.isGrounded) {
-            isRunning = true;
-        }
-        else if (callbackContext.canceled) {
-            isRunning = false;
-        }
+        //if (callbackContext.started && characterController.isGrounded) {
+        //    isRunning = true;
+        //}
+        //else if (callbackContext.canceled) {
+        //    isRunning = false;
+        //}
     }
 
     //bool isGrounded() {

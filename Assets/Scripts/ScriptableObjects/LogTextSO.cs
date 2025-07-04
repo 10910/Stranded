@@ -20,7 +20,7 @@ public class LogTextSO : ScriptableObject
     public Dictionary<string, string> entries;
     private void OnEnable() {
         title = name;
-        displayTitle = name;
+        //displayTitle = name;
         entries = new Dictionary<string, string>();
         foreach (var text in texts) {
             if (text.key != "") {

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bad5fa0116e5ef409745a7fb3daa1aa, type: 3}
+  m_Name: Cave
+  m_EditorClassIdentifier: 
+  title: Cave
+  displayTitle: Day10_2
+  isViewed: 0
+  texts:
+  - key: body
+    text: "Assistant: Oh wow, I actually made it out alive.\nRecorder: Did you find
+      the Professor?\nAssistant: Unfortunately... no.\nAssistant: Looks like I was
+      taken to the fish\u2019s lair. It couldn\u2019t digest this hard shell, so
+      it spat me out.\nRecorder: That\u2019s incredible... Can you guess where you
+      are now?"

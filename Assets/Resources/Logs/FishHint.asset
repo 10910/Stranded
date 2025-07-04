@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bad5fa0116e5ef409745a7fb3daa1aa, type: 3}
+  m_Name: FishHint
+  m_EditorClassIdentifier: 
+  title: FishHint
+  displayTitle: Day10_1
+  isViewed: 1
+  texts:
+  - key: body
+    text: "Assistant: Calling the ship! Calling the ship! Do you copy?\nRecorder:
+      Ship here, go ahead.\nAssistant: The Professor got swallowed! She was just
+      examining some plants by the shore, and suddenly a huge fish burst out from
+      underground and ate her whole!\nRecorder: Oh no\u2026 Don\u2019t panic. Please
+      head back to the ship for now.\nAssistant: But I don\u2019t even know how to
+      get back\u2026 We never found a way to climb back up the cliff.\nAssistant:
+      \u2026 I\u2019m going after her. That fish must\u2019ve come from some kind
+      of underground tunnel.\nRecorder: Wait! That\u2019s way too dangerous!\nAssistant:
+      If I had something as tough as that turtle\u2019s shell, maybe I wouldn\u2019t
+      even be afraid of getting swallowed.\nRecorder: But we can\u2019t exactly remove
+      the turtle\u2019s shell\u2026 Hold on\u2014according to your scan data, the
+      shell of that scallop by the shore is made of the same material as the turtle\u2019s.\nRecorder:
+      And scallop shells are much easier to get.\nAssistant: You\u2019re a genius!
+      Thanks for the tip\u2014I\u2019m taking the risk."
