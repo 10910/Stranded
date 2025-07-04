@@ -34,7 +34,7 @@ public class MentaRay : Creature, IInteractable
     public void Interact() {
         GetComponentInChildren<MeshRenderer>().enabled = false;
         GetComponent<Collider>().enabled = false;
-        shooter.stored.Push(this);
+        shooter.Add(this);
     }
 
     private void OnTriggerEnter(Collider other) {

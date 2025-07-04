@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,11 +13,14 @@ public class Shooter : MonoBehaviour
     public RaycastHit hit;
     public LayerMask layerMask;
     public Stack<Usable> stored;
+    public TextMeshProUGUI hud;
+    public int capacity = 5;
     // Start is called before the first frame update
     void Start()
     {
         //shooter.SetActive(false);
-        stored = new Stack<Usable>();
+        stored = new Stack<Usable>(capacity);
+        hud.text = $"{stored.Count}/{capacity}";
     }
 
     // Update is called once per frame
@@ -42,10 +47,20 @@ public class Shooter : MonoBehaviour
 
     public void OnShoot(InputAction.CallbackContext context)
     {
-        Usable shooted;
-        if (shooter.activeSelf && context.started && stored.TryPop(out shooted))
+        Usable usable;
+        if (shooter.activeSelf && context.started && stored.TryPop(out usable))
         {
-            shooted.GetComponent<Usable>().Use();
+            usable.Use();
+            if(stored.TryPeek(out usable)){
+                if (usable.GetComponent<Fruit>()) {
+                    usable.GetComponent<Renderer>().enabled = true;
+                }
+                UpdateText(usable.name);
+            }
+            else {
+                hud.text = $"{stored.Count}/{capacity}";
+            }
+            
         }
     }
 
@@ -58,5 +73,30 @@ public class Shooter : MonoBehaviour
         }
     }
 
+    public bool Add(Usable usable){
+        if(stored.Count == capacity){
+            return false;
+        }else{
+            Usable top;
+            if(stored.TryPeek(out top)){
+                if (top.GetComponent<Fruit>()) { 
+                    top.GetComponent<Renderer>().enabled = false;
+                }
+            }
+            if (usable.GetComponent<Fruit>()) {
+                Transform tf = usable.transform;
+                tf.SetParent(GameManager.instance.FPSCamera, false);
+                tf.localPosition = new Vector3(0.145f, -0.089f, 0.661f);
+                tf.localEulerAngles = Vector3.zero;
+            }
+            stored.Push(usable);
+            UpdateText(usable.name);
+            return true;
+        }
+    }
 
+    void UpdateText(string name){
+        name = Regex.Replace(name, @"\([^)]*\)", "");
+        hud.text = $"{stored.Count}/{capacity}\n{name}";
+    }
 }

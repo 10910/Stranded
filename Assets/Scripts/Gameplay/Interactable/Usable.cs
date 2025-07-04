@@ -5,6 +5,5 @@ using UnityEngine;
 public class Usable : MonoBehaviour
 {
     public string Usage;
-    public virtual void Use() {
-    }
+    public virtual void Use() { }
 }

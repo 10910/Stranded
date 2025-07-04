@@ -16,11 +16,8 @@ public class NoiseFruit : Usable, IInteractable
 
         gameObject.layer = LayerMask.NameToLayer("Default");
         GetComponent<Fruit>().tree.GrowFruit().Forget();
-        transform.SetParent(GameManager.instance.FPSCamera, false);
-        //gameObject.layer = LayerMask.GetMask("Hands");
-        transform.localPosition = new Vector3(0.145f, -0.089f, 0.661f);
-        transform.localEulerAngles = Vector3.zero;
-        GameManager.instance.shooter.stored.Push(this);
+        
+        GameManager.instance.shooter.Add(this);
     }
 
     // Start is called before the first frame update

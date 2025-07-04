@@ -45,14 +45,14 @@ public class ParalyseFruit : Usable, IShootable, IInteractable
         gameObject.layer = LayerMask.NameToLayer("Default");
         GetComponent<Fruit>().tree.GrowFruit().Forget();
         print("Interact with paralyse fruit");
-        transform.SetParent(FPSCamera, false);
-        //gameObject.layer = LayerMask.GetMask("Hands");
-        transform.localPosition = new Vector3(0.145f, -0.089f, 0.661f);
-        transform.localEulerAngles = Vector3.zero;
-        Shooter.stored.Push(this);
+        //transform.SetParent(FPSCamera, false);
+        ////gameObject.layer = LayerMask.GetMask("Hands");
+        //transform.localPosition = new Vector3(0.145f, -0.089f, 0.661f);
+        //transform.localEulerAngles = Vector3.zero;
+        Shooter.Add(this);
     }
 
-    public async void Eat(){
+    public void Eat(){
         GetComponent<Fruit>().tree.GrowFruit().Forget();
         //await UniTask.WaitForSeconds(5f);
         //Destroy(gameObject);

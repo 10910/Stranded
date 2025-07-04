@@ -14,7 +14,7 @@ public class Scallop : Creature, IInteractable
         jaw.gameObject.SetActive(false);
         GetComponent<MeshRenderer>().enabled = false;
         GetComponent<Collider>().enabled = false;
-        GameManager.instance.shooter.stored.Push(this);
+        GameManager.instance.shooter.Add(this);
     }
 
     public override void Use() {

@@ -32,7 +32,7 @@ public class TurtleFruit : Usable, IShootable, IInteractable
 
     public void Shoot() {
         Vector3 Forward = FPSCamera.forward;
-        print("shoot paralyse");
+        print("shoot red fruit");
         transform.SetParent(null);
         gameObject.layer = LayerMask.NameToLayer("Environment");
         var rb = GetComponent<Rigidbody>();
@@ -45,12 +45,11 @@ public class TurtleFruit : Usable, IShootable, IInteractable
     public void Interact() {
         gameObject.layer = LayerMask.NameToLayer("Default");
         GetComponent<Fruit>().tree.GrowFruit().Forget();
-        print("Interact with paralyse fruit");
-        transform.SetParent(FPSCamera, false);
-        //gameObject.layer = LayerMask.GetMask("Hands");
-        transform.localPosition = new Vector3(0.145f, -0.089f, 0.661f);
-        transform.localEulerAngles = Vector3.zero;
-        Shooter.stored.Push(this);
+        //print("Interact with turtle fruit");
+        //transform.SetParent(FPSCamera, false);
+        //transform.localPosition = new Vector3(0.145f, -0.089f, 0.661f);
+        //transform.localEulerAngles = Vector3.zero;
+        Shooter.Add(this);
     }
 
     private void OnCollisionEnter(Collision collision) {
