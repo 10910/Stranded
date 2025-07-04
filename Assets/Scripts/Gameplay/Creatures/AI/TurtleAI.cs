@@ -1,7 +1,9 @@
 using Cysharp.Threading.Tasks;
+using DG.Tweening;
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -12,17 +14,18 @@ public enum AnimalState
     Eat,
     Flee,
     Idle,
-    Paraylsed
+    Paraylsed,
+    Startled
 }
-public class AnimalAI : MonoBehaviour
+public class TurtleAI : MonoBehaviour
 {
-
-
     public AnimalState currentState = AnimalState.Wander;
     public float wanderRadius = 10f;
     public float detectionRadius = 12f;
     public float navmeshCheckRadius = 1f;
     public float wanderTimer = 3f;
+    public float startledTimer;
+    public float startledDuration = 5f;
     public int tryTimes = 10;
     public Vector3 wanderCenter;
     public float currentIdleDuration = 0f;
@@ -31,9 +34,11 @@ public class AnimalAI : MonoBehaviour
 
     private float idleTimer;
     private NavMeshAgent agent;
-    private Transform target; // 可选：追逐目标
-    private Transform threat; // 可选：逃跑威胁
+    private Transform target;
 
+    // retreat animation
+    public float height = 2.2f;
+    public float retreatDuration = 1f;
 
     void Start() {
         wanderCenter = transform.position;
@@ -55,14 +60,14 @@ public class AnimalAI : MonoBehaviour
             case AnimalState.Chase:
                 HandleChaseState();
                 break;
-            case AnimalState.Flee:
-                HandleFleeState();
-                break;
             case AnimalState.Idle:
                 HandleIdleState();
                 break;
             case AnimalState.Eat:
                 HandleEatState();
+                break;
+            case AnimalState.Startled:
+                HandleStartledState();
                 break;
         }
     }
@@ -130,24 +135,24 @@ public class AnimalAI : MonoBehaviour
 
     }
 
-    void HandleFleeState() {
-        if (threat != null && agent != null && agent.isOnNavMesh) {
-            Vector3 fleeDirection = (transform.position - threat.position).normalized * wanderRadius; // 使用 wanderRadius 作为逃跑距离
-            Vector3 fleeTarget = transform.position + fleeDirection;
-            NavMeshHit hit;
-            if (NavMesh.SamplePosition(fleeTarget, out hit, wanderRadius, NavMesh.AllAreas)) {
-                agent.SetDestination(hit.position);
-            }
-            else {
-                // 如果找不到逃跑点，可以尝试随机移动
-                SetNewWanderDestination();
-            }
-        }
-        else {
-            // 威胁丢失或无法导航，切换回游荡
-            currentState = AnimalState.Wander;
-        }
-    }
+    //void HandleFleeState() {
+    //    if (threat != null && agent != null && agent.isOnNavMesh) {
+    //        Vector3 fleeDirection = (transform.position - threat.position).normalized * wanderRadius; // 使用 wanderRadius 作为逃跑距离
+    //        Vector3 fleeTarget = transform.position + fleeDirection;
+    //        NavMeshHit hit;
+    //        if (NavMesh.SamplePosition(fleeTarget, out hit, wanderRadius, NavMesh.AllAreas)) {
+    //            agent.SetDestination(hit.position);
+    //        }
+    //        else {
+    //            // 如果找不到逃跑点，可以尝试随机移动
+    //            SetNewWanderDestination();
+    //        }
+    //    }
+    //    else {
+    //        // 威胁丢失或无法导航，切换回游荡
+    //        currentState = AnimalState.Wander;
+    //    }
+    //}
 
     void HandleIdleState() {
         agent.isStopped = true;
@@ -157,6 +162,37 @@ public class AnimalAI : MonoBehaviour
             idleTimer = 0f;
         }
     }
+
+    void HandleStartledState() {
+        startledTimer += Time.deltaTime;
+        if(startledTimer >= startledDuration){
+            if (shouldPrintDebug) print("turtle recover from startled");
+            currentState = AnimalState.Idle;
+            currentIdleDuration = 1f;
+            startledTimer = 0;
+            isCanceled = false;
+            float dest = transform.position.y + height;
+            print(dest);
+            transform.DOMoveY(transform.position.y + height+ 0.3f, retreatDuration).SetEase(Ease.Linear).OnComplete(()=>{
+                agent.updatePosition = true;
+                idleTimer = 0f;
+            });
+        }
+    }
+
+    public void SwitchStartled(){
+        if (currentState == AnimalState.Startled) {
+            startledTimer = 0;
+        }else{
+            if (shouldPrintDebug) print("turtle startled");
+            agent.updatePosition = false;
+            agent.isStopped = true;
+            isCanceled = true;
+            transform.DOMoveY(transform.position.y - height, retreatDuration).SetEase(Ease.OutQuad);
+            currentState = AnimalState.Startled;
+        }
+    }
+
 
     void DetectFood() {
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, detectionRadius);
@@ -187,4 +223,5 @@ public class AnimalAI : MonoBehaviour
             SetNewWanderDestination();
         }
     }
+
 }

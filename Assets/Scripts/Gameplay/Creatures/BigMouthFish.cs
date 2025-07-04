@@ -63,7 +63,7 @@ public class BigMouthFish : MonoBehaviour
         if (other.gameObject.layer == LayerMask.NameToLayer("Creature")) {
             print("catched animal");
             Destroy(Bait);
-            var ai = other.GetComponent<AnimalAI>();
+            var ai = other.GetComponent<TurtleAI>();
             if (ai){
                 ai.enabled = false;
                 ai.GetComponent<NavMeshAgent>().enabled = false;

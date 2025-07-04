@@ -25,17 +25,19 @@ public class HighTurtle : Creature
     }
 
     public void RetreatShell(){
-        var state = GetComponent<AnimalAI>();
-        if (state != null ){
-            state.currentState = AnimalState.Eat;
-            state.isCanceled = true;
-            GetComponent<NavMeshAgent>().enabled = false;
+        var state = GetComponent<TurtleAI>();
+        if (state != null) {
+            state.SwitchStartled();
         }
 
-        transform.DOMoveY(transform.position.y - height, duration).SetEase(Ease.OutQuad);
-        float headTime = duration * 1000 * headTimePercent;
-        float headDuration = duration * 1000 * (1 - headTimePercent);
+        //transform.DOMoveY(transform.position.y - height, duration).SetEase(Ease.OutQuad);
+        //float headTime = duration * 1000 * headTimePercent;
+        //float headDuration = duration * 1000 * (1 - headTimePercent);
         //await Task.Delay((int)headTime);
         //head.transform.DOLocalMoveX(head.transform.localPosition.x - headDistance, headDuration);
+    }
+
+    private void OnCollisionEnter(Collision collision) {
+        
     }
 }

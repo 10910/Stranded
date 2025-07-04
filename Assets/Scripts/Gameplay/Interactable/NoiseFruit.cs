@@ -37,10 +37,11 @@ public class NoiseFruit : Usable, IInteractable
 
     public override void Use() {
         Collider[] colliders = Physics.OverlapSphere(transform.position, 8f);
-        foreach (Collider collider in colliders) {
-            if (collider.CompareTag("HighTurtle")) {
+        foreach (Collider collider in colliders) {  
+            if (!collider.isTrigger && collider.GetComponent<HighTurtle>()) {
+                var turtle = collider.GetComponent<HighTurtle>();
                 print(collider.gameObject.name + "shocked");
-                collider.GetComponent<HighTurtle>().RetreatShell();
+                turtle.RetreatShell();
             }
         }
         Destroy(gameObject);

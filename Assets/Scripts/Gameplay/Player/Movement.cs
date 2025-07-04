@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks.Triggers;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
@@ -40,6 +41,7 @@ public class Movement : MonoBehaviour
     public CharacterController characterController;
     public MeshRenderer crouchMesh;
     public MeshRenderer standMesh;
+    public MovingPlatform platform = null;
 
     private Vector2 JumpDir;
     void Start() {
@@ -99,6 +101,9 @@ public class Movement : MonoBehaviour
             isFalling= false;
             moveDelta += Vector3.down * 0.2f;
             //handleSlope(ref moveDelta);
+        }
+        if(platform != null){
+            moveDelta += platform.movingDelta;
         }
         characterController.Move(moveDelta);
     }
