@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb2c9e6f369d8e946983e2da39f237d3, type: 3}
   m_Name: SeaPiper
   m_EditorClassIdentifier: 
-  creatureName: SeaPiper
+  creatureName: "\u7EC6\u5634\u9E1F"
   firstDiscoverer: 1
   threatLevel: 1
   discoveredState: 0
   imageTex: {fileID: 0}
   sprite: {fileID: 0}
   descriptions:
-  - Feed on stone scallop
-  - "Can pry open scallop\u2018s shell"
-  - Easily startled
+  - "\u4EE5\u77F3\u8D1D\u4E3A\u98DF"
+  - "\u80FD\u5544\u5F00\u77F3\u8D1D\u7684\u58F3"
+  - "\u5BB9\u6613\u88AB\u4EBA\u60CA\u5413"
   descriptions__: []

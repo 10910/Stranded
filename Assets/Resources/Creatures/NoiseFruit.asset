@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb2c9e6f369d8e946983e2da39f237d3, type: 3}
   m_Name: NoiseFruit
   m_EditorClassIdentifier: 
-  creatureName: Echo Fruit
+  creatureName: "\u56DE\u58F0\u679C\u5B9E"
   firstDiscoverer: 5
   threatLevel: 2
-  discoveredState: 3
+  discoveredState: 0
   imageTex: {fileID: 0}
   sprite: {fileID: 0}
   descriptions:
-  - Can produce a loud noise when struck
+  - "\u51FB\u6253\u4F1A\u4EA7\u751F\u5DE8\u5927\u566A\u97F3"
   descriptions__: []

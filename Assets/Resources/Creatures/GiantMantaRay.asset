@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb2c9e6f369d8e946983e2da39f237d3, type: 3}
   m_Name: GiantMantaRay
   m_EditorClassIdentifier: 
-  creatureName: Giant Manta Ray
+  creatureName: "\u5DE8\u8F90\u9CBC"
   firstDiscoverer: 1
   threatLevel: 1
   discoveredState: 0

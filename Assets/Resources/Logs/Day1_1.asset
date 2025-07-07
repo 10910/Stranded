@@ -17,6 +17,4 @@ MonoBehaviour:
   isViewed: 0
   texts:
   - key: body
-    text: "Captain: Are you all alright?\nProfessor: The logging system is intact.\nRecorder:
-      What exactly happened?\nCaptain: \u2026I'm not sure. Could you come with me
-      to check the fuel bay?\nRecorder: Alright, Captain."
+    text: "\u8239\u957F\uFF1A\u4F60\u4EEC\u90FD\u8FD8\u597D\u5417\uFF01\r\n\u6559\u6388\uFF1A\u8BB0\u5F55\u7CFB\u7EDF\u6CA1\u6709\u635F\u574F\u3002\r\n\u8BB0\u5F55\u5458\uFF1A\u5230\u5E95\u53D1\u751F\u4E86\u4EC0\u4E48\uFF1F\r\n\u8239\u957F\uFF1A\u2026\u6211\u4E5F\u4E0D\u592A\u6E05\u695A\uFF0C\u53EF\u4EE5\u8DDF\u6211\u53BB\u8D9F\u71C3\u6599\u8231\u68C0\u67E5\u4E00\u4E0B\u5417\uFF1F\r\n\u8BB0\u5F55\u5458\uFF1A\u597D\u7684\uFF0C\u8239\u957F\u3002\r"

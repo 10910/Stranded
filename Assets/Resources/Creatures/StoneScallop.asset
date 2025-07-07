@@ -12,14 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb2c9e6f369d8e946983e2da39f237d3, type: 3}
   m_Name: StoneScallop
   m_EditorClassIdentifier: 
-  creatureName: Stone Scallop
+  creatureName: "\u77F3\u8D1D"
   firstDiscoverer: 1
   threatLevel: 1
   discoveredState: 0
   imageTex: {fileID: 0}
   sprite: {fileID: 0}
   descriptions:
-  - Extremely hard shell
-  - Impossible to open it by hand
-  - Appears on the beach during low tide
+  - "\u58F3\u4F53\u6781\u4E3A\u575A\u786C"
+  - "\u65E0\u6CD5\u4EBA\u4E3A\u64AC\u5F00"
   descriptions__: []

@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb2c9e6f369d8e946983e2da39f237d3, type: 3}
   m_Name: ParalyzeFruit
   m_EditorClassIdentifier: 
-  creatureName: Paralyze Fruit
+  creatureName: "\u9EBB\u9189\u679C\u5B9E"
   firstDiscoverer: 3
   threatLevel: 1
   discoveredState: 0
   imageTex: {fileID: 0}
   sprite: {fileID: 0}
   descriptions:
-  - Can temporarily numb small creatures
+  - "\u53EF\u4EE5\u6682\u65F6\u9EBB\u9189\u5C0F\u578B\u751F\u7269"
   descriptions__: []

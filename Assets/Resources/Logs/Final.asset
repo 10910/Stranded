@@ -17,15 +17,4 @@ MonoBehaviour:
   isViewed: 0
   texts:
   - key: body
-    text: "Assistant: Hey, I want to go lie down on the mountaintop. Want to come?\nRecorder:
-      Sure.\nAssistant: It\u2019s kind of ironic, huh? After searching for over 10
-      days, we\u2019ve come full circle\u2026 and the Professor is still\u2026\nRecorder:
-      I\u2019m really sad too\u2026 but at least there\u2019s still hope. The Captain\u2019s
-      still out there looking for a way, right?\nAssistant: I\u2019m afraid the Captain\u2019s
-      the one taking it the hardest\u2026 after all, she was his ex-wife.\nRecorder:
-      Wait\u2026 huh???\nAssistant: Oh, you didn\u2019t know?\nRecorder: How is that
-      possible? The Professor always acted so cold toward him!\nAssistant: That\u2019s
-      why she\u2019s the ex-wife. But I could still feel a connection between them.\nRecorder:
-      I just can\u2019t imagine it\u2026 those two seemed worlds apart.\nAssistant:
-      The Captain still has feelings for her. Otherwise, he wouldn\u2019t have taken
-      such a huge risk piloting this ship."
+    text: "\u52A9\u7406\uFF1A\u563F\uFF0C\u6211\u60F3\u53BB\u8EBA\u5C71\u9876\u3002\u8981\u4E00\u8D77\u5417\uFF1F\r\n\u8BB0\u5F55\u5458\uFF1A\u597D\u554A\u3002\r\n\u52A9\u7406\uFF1A\u771F\u8BBD\u523A\u554A\u3002\u5BFB\u5BFB\u89C5\u89C510\u591A\u5929\u53C8\u7ED5\u56DE\u5230\u8FD9\u91CC\uFF0C\u6559\u6388\u8FD8\u2026\r\n\u8BB0\u5F55\u5458\uFF1A\u6211\u4E5F\u5F88\u96BE\u8FC7\u2026\u4F46\u662F\u81F3\u5C11\u6211\u4EEC\u8FD8\u6709\u5E0C\u671B\u3002\u8239\u957F\u8FD8\u5728\u5916\u9762\u627E\u529E\u6CD5\u4E0D\u662F\u5417\u3002\r\n\u52A9\u7406\uFF1A\u6050\u6015\u8239\u957F\u624D\u662F\u6700\u96BE\u8FC7\u7684\u5427\u2026\u6BD5\u7ADF\u90A3\u53EF\u662F\u4ED6\u7684\u524D\u59BB\u3002\r\n\u8BB0\u5F55\u5458\uFF1A\u6B38\u2026\u54C8\uFF1F\uFF1F\uFF1F\r\n\u52A9\u7406\uFF1A\u554A\uFF0C\u4F60\u539F\u6765\u4E0D\u77E5\u9053\u554A\u3002\r\n\u8BB0\u5F55\u5458\uFF1A\u8FD9\u600E\u4E48\u53EF\u80FD\uFF1F\u6559\u6388\u660E\u660E\u5BF9\u4ED6\u8FD9\u4E48\u51B7\u6F20\uFF01\r\n\u52A9\u7406\uFF1A\u6240\u4EE5\u624D\u662F\u524D\u59BB\u554A\u3002\u4F46\u6211\u80FD\u611F\u89C9\u5230\u4ED6\u4EEC\u4E4B\u95F4\u7684\u9ED8\u5951\u3002\r\n\u8BB0\u5F55\u5458\uFF1A\u7B80\u76F4\u96BE\u4EE5\u60F3\u8C61\u2026\u4ED6\u4EEC\u4E24\u4E2A\u4EBA\u8FD9\u4E48\u5927\u7684\u5DEE\u8DDD\u600E\u4E48\u4F1A\u5728\u4E00\u8D77\uFF1F\r\n\u52A9\u7406\uFF1A\u8239\u957F\u5BF9\u4ED6\u8FD8\u662F\u6709\u611F\u60C5\u7684\u3002\u5426\u5219\u4E5F\u4E0D\u4F1A\u5192\u8FD9\u4E48\u5927\u98CE\u9669\u5F00\u8FD9\u8258\u8239\u3002\r"

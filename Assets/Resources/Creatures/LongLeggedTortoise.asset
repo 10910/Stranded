@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb2c9e6f369d8e946983e2da39f237d3, type: 3}
   m_Name: LongLeggedTortoise
   m_EditorClassIdentifier: 
-  creatureName: Long-legged Tortoise
+  creatureName: "\u9AD8\u811A\u9F9F"
   firstDiscoverer: 4
   threatLevel: 0
-  discoveredState: 3
+  discoveredState: 0
   imageTex: {fileID: 0}
   sprite: {fileID: 0}
   descriptions:
-  - Its shell is hard enough to step on
-  - Retreats into its shell when startled by loud noises
-  - Is fond of Red Fruit
+  - "\u58F3\u4F53\u575A\u786C\uFF0C\u4EBA\u53EF\u4EE5\u8E29"
+  - "\u88AB\u566A\u97F3\u60CA\u5413\u5230\u65F6\u4F1A\u7F29\u56DE\u58F3\u91CC"
+  - "\u559C\u6B22\u5403\u7EA2\u8272\u6C34\u679C"
   descriptions__: []

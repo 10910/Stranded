@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb2c9e6f369d8e946983e2da39f237d3, type: 3}
   m_Name: RedFruit
   m_EditorClassIdentifier: 
-  creatureName: Redberry
+  creatureName: "\u7EA2\u679C"
   firstDiscoverer: 1
   threatLevel: 1
-  discoveredState: 0
+  discoveredState: 3
   imageTex: {fileID: 0}
   sprite: {fileID: 0}
   descriptions:
-  - Tortoise's favorite food
+  - "\u4E4C\u9F9F\u6700\u7231\u7684\u98DF\u7269"
   descriptions__: []

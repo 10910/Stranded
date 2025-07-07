@@ -17,9 +17,4 @@ MonoBehaviour:
   isViewed: 0
   texts:
   - key: body
-    text: "Captain: Stay away from the river! That water is deadly to us.\nAssistant:
-      But it looks like there\u2019s no other way forward.\nRecorder: I just received
-      a photo from the Professor\u2014she captured a turtle drinking the water. It
-      seems harmless to the native creatures. Maybe we can use that to our advantage.\nCaptain:
-      The turtle... Haha, I\u2019ve got an idea. Assistant, let\u2019s go back and
-      grab some of its favorite fruit.\nAssistant: I get it! The carrot and the stick!"
+    text: "\u8239\u957F\uFF1A\u4E0D\u8981\u9760\u8FD1\u9644\u8FD1\u7684\u6CB3\u6C34\uFF01\u4ED6\u5BF9\u6211\u4EEC\u662F\u81F4\u547D\u7684\u3002\r\n\u52A9\u7406\uFF1A\u53EF\u662F\u524D\u9762\u4F3C\u4E4E\u6CA1\u6709\u8DEF\u4E86\u3002\r\n\u8BB0\u5F55\u5458\uFF1A\u6211\u8FD9\u91CC\u6536\u5230\u4E86\u6559\u6388\u62CD\u4E0B\u7684\u4E4C\u9F9F\u559D\u6C34\u7684\u7167\u7247\u3002\u8FD9\u4E9B\u6C34\u5BF9\u8FD9\u4E2A\u661F\u7403\u7684\u751F\u7269\u6765\u8BF4\u662F\u65E0\u5BB3\u7684\u3002\u6216\u8BB8\u6211\u4EEC\u53EF\u4EE5\u5229\u7528\u8FD9\u4E00\u70B9\u3002\r\n\u8239\u957F\uFF1A\u4E4C\u9F9F\u2026\u54C8\u54C8\uFF0C\u6211\u6709\u529E\u6CD5\u4E86\u3002\u52A9\u7406\uFF0C\u6211\u4EEC\u56DE\u53BB\u62FF\u4E9B\u4E4C\u9F9F\u6700\u7231\u5403\u7684\u679C\u5B50\u3002\r\n\u52A9\u7406\uFF1A\u6211\u77E5\u9053\u4E86\uFF01\u80E1\u841D\u535C\u548C\u5927\u68D2\uFF01\r"

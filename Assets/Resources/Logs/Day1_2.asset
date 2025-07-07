@@ -14,10 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Day1_2
   displayTitle: Day1_2
-  viewed: 0
+  isViewed: 0
   texts:
   - key: body
-    text: "Recorder: All the fuel leaked out during the crash landing\u2026\nCaptain:
-      That\u2019s bad.\nAssistant: Captain, the comms are down too!\nCaptain: Oh
-      no\u2026 Let me think.\nProfessor: Stay calm. The rover still works \u2014 
-      survey the planet first."
+    text: "\u8BB0\u5F55\u5458\uFF1A\u71C3\u6599\u5168\u90FD\u5728\u8FEB\u964D\u8FC7\u7A0B\u4E2D\u6CC4\u9732\u4E86\u2026\r\n\u8239\u957F\uFF1A\u8FD9\u4E0B\u574F\u4E86\u3002\r\n\u52A9\u7406\uFF1A\u8239\u957F\uFF0C\u8054\u7EDC\u5668\u4E5F\u574F\u6389\u4E86\uFF01\r\n\u8239\u957F\uFF1A\u54E6\u4E0D\u2026\u8BA9\u6211\u60F3\u60F3\u529E\u6CD5\u3002\r\n\u6559\u6388\uFF1A\u51B7\u9759\u4E0B\u3002\u63A2\u6D4B\u7CFB\u7EDF\u8FD8\u80FD\u7528\uFF0C\u5148\u63A2\u6D4B\u4E00\u4E0B\u8FD9\u4E2A\u661F\u7403\u5427\u3002\r"

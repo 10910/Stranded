@@ -17,14 +17,12 @@ MonoBehaviour:
   isViewed: 0
   texts:
   - key: body
-    text: "Recorder: Captain, the assistant, and the professor have been out of contact
-      for five days.\nOnly one week's worth of food left. Whether I find fuel or
-      find them\u2026\nI have to go."
+    text: "\u8BB0\u5F55\u5458\uFF1A\u8239\u957F\u5DF2\u7ECF\u5931\u8054\u4E24\u5929\uFF0C\u52A9\u7406\uFF0C\u6559\u6388\u4E5F\u4E00\u76F4\u6CA1\u6709\u4F20\u6765\u6D88\u606F\uFF0C\u50A8\u5907\u98DF\u7269\u53EA\u5269\u4E00\u5468\u7684\u91CF\u4E86\u3002\u4E0D\u7BA1\u662F\u627E\u5230\u8865\u5145\u71C3\u6599\u8FD8\u662F\u627E\u5230\u4ED6\u4EEC\u2026\u6211\u5FC5\u987B\u5F97\u51FA\u53D1\u4E86\u3002"
   - key: Recorder
-    text: Now preparing to search for the missing crew.
+    text: "\u6B63\u51C6\u5907\u641C\u5BFB\u5931\u8E2A\u7684\u8239\u5458\uFF0C\u5E76\u5C1D\u8BD5\u5BFB\u627E\u71C3\u6599\u3002"
   - key: Captain
-    text: Currently missing.
+    text: "\u5728\u7B2C11\u5929\u5931\u8E2A\u3002"
   - key: Assistant
-    text: Missing since Day 13.
+    text: "\u5728\u7B2C13\u5929\u5931\u8E2A\u3002"
   - key: Professor
-    text: Missing since Day 13.
+    text: "\u5728\u7B2C13\u5929\u5931\u8E2A\u3002"

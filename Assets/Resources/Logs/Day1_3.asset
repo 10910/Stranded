@@ -14,20 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Day1_3
   displayTitle: Day1_3
-  isViewed: 1
+  isViewed: 0
   texts:
   - key: body
-    text: "Captain: There's an energy reading near the volcano. I\u2019ll head there.
-      You all continue your assigned tasks.\nAssistant: It\u2019s too dangerous to
-      go alone!\nProfessor: No objections from me.\nCaptain: We still have the recorder
-      to keep us connected. The ship\u2019s failure was my responsibility. I\u2019ll
-      find us fuel.\nRecorder: I\u2019ll sync all your collected data to the log
-      system. Don\u2019t forget to check your tablets."
+    text: "\u8239\u957F\uFF1A\u706B\u5C71\u90A3\u91CC\u68C0\u6D4B\u5230\u4E86\u80FD\u6E90\u53CD\u5E94\u3002\u6211\u53BB\u90A3\u91CC\u770B\u770B\uFF0C\u4F60\u4EEC\u5C31\u5B8C\u6210\u4F60\u4EEC\u672C\u6765\u7684\u4EFB\u52A1\u5427\u3002\r\n\u52A9\u7406\uFF1A\u4E00\u4E2A\u4EBA\u53BB\u592A\u5371\u9669\u4E86\uFF01\r\n\u6559\u6388\uFF1A\u6211\u6CA1\u610F\u89C1\u3002\r\n\u8239\u957F\uFF1A\u6709\u8BB0\u5F55\u5458\u8DDF\u6211\u4EEC\u8054\u7EDC\u5462\u3002\u98DE\u8239\u51FA\u4E8B\u662F\u6211\u7684\u8D23\u4EFB\uFF0C\u6211\u4F1A\u627E\u5230\u8865\u5145\u71C3\u6599\u7684\u3002\r\n\u8BB0\u5F55\u5458\uFF1A\u6211\u4F1A\u628A\u4F60\u4EEC\u6536\u96C6\u7684\u4FE1\u606F\u540C\u6B65\u5230\u8BB0\u5F55\u7CFB\u7EDF\u7684\uFF0C\u8BB0\u5F97\u968F\u65F6\u67E5\u770B\u4F60\u4EEC\u7684\u5E73\u677F\u3002\r"
   - key: Captain
-    text: Went alone to investigate the volcano.
+    text: "\u72EC\u81EA\u524D\u5F80\u4E86\u706B\u5C71\u3002"
   - key: Recorder
-    text: 'After the crash, I stayed on the ship to handle communications. '
+    text: "\u5760\u6BC1\u540E\uFF0C\u6211\u72EC\u81EA\u7559\u5728\u8239\u4E0A\u5904\u7406\u901A\u8BAF\u3002"
   - key: Professor
-    text: Went on a field expedition with the assistant.
+    text: "\u548C\u52A9\u624B\u4E00\u540C\u8FDB\u884C\u73AF\u5883\u8C03\u67E5\u3002"
   - key: Assistant
-    text: Participated in the field expedition with the professor.
+    text: "\u548C\u6559\u6388\u4E00\u540C\u8FDB\u884C\u73AF\u5883\u8C03\u67E5\u3002"

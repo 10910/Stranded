@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb2c9e6f369d8e946983e2da39f237d3, type: 3}
   m_Name: FlyingMentaRay
   m_EditorClassIdentifier: 
-  creatureName: Flying Manta Ray
+  creatureName: "\u98DE\u8F90\u9CBC"
   firstDiscoverer: 4
   threatLevel: 0
-  discoveredState: 3
+  discoveredState: 0
   imageTex: {fileID: 0}
   sprite: {fileID: 0}
   descriptions:
-  - Serve as a good paraglider while unconscious
-  - Catch high-hanging food with its head
-  - Is fond of Noise Fruit
+  - "\u8EAB\u4F53\u8F7B\u76C8\uFF0C\u53EF\u4EE5\u5F53\u6ED1\u7FD4\u4F1E"
+  - "\u7528\u5934\u90E8\u6355\u6349\u9AD8\u5904\u7684\u98DF\u7269"
+  - "\u559C\u6B22\u5403\u7EFF\u8272\u6C34\u679C"
   descriptions__:
   - value: "\u4F1A\u98DE\u7684\u8760\u9CBC\uFF01"
     isAvailable: 1
