@@ -148,22 +148,22 @@ public class Movement : MonoBehaviour
     }
 
     public void OnCrouch(InputAction.CallbackContext callbackContext) {
-        if (callbackContext.started && characterController.isGrounded) {
-            isCrouching = true;
-            characterController.height = 1;
-            characterController.center -= new Vector3(0, 0.5f, 0);
-            standMesh.enabled = false;
-            crouchMesh.enabled = true;
-            childCamera.transform.position -= new Vector3(0, 0.75f, 0);
-        }
-        else if (callbackContext.canceled) {
-            isCrouching = false;
-            characterController.height = 2;
-            characterController.center = Vector3.zero;
-            crouchMesh.enabled = false;
-            standMesh.enabled = true;
-            childCamera.transform.position += new Vector3(0, 0.75f, 0);
-        }
+        //if (callbackContext.started && characterController.isGrounded) {
+        //    isCrouching = true;
+        //    characterController.height = 1;
+        //    characterController.center -= new Vector3(0, 0.5f, 0);
+        //    standMesh.enabled = false;
+        //    crouchMesh.enabled = true;
+        //    childCamera.transform.position -= new Vector3(0, 0.75f, 0);
+        //}
+        //else if (callbackContext.canceled) {
+        //    isCrouching = false;
+        //    characterController.height = 2;
+        //    characterController.center = Vector3.zero;
+        //    crouchMesh.enabled = false;
+        //    standMesh.enabled = true;
+        //    childCamera.transform.position += new Vector3(0, 0.75f, 0);
+        //}
     }
 
     public void OnRun(InputAction.CallbackContext callbackContext) {

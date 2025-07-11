@@ -87,15 +87,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Catch",
-                    "type": "Button",
-                    "id": "461a81df-6d50-4498-9f1c-4b73e3595719",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Interact",
                     "type": "Button",
                     "id": "d0508ea2-ed41-41df-a410-7ca4cb5dc07e",
@@ -436,17 +427,6 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Shoot",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "1b07d3f2-e3cd-4742-999f-f443c845793a",
-                    "path": "<Keyboard>/e",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "Catch",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
