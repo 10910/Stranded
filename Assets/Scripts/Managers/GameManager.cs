@@ -102,7 +102,7 @@ public class GameManager : MonoBehaviour
         seq.Join(BigMantaRay.DOLocalRotate(new Vector3(85, 0, 0), 2f));
         await UniTask.WaitForSeconds(2f);
 
-        Instantiate(MantaRayPrfb).transform.position = MantaRayRespawn.position;
+        
 
     }
 
@@ -121,5 +121,9 @@ public class GameManager : MonoBehaviour
                 respawnPanel.SetActive(true);
             }
         }
+    }
+
+    public void RespawnRay(){
+        Instantiate(MantaRayPrfb).transform.position = MantaRayRespawn.position;
     }
 }

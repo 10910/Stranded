@@ -31,10 +31,13 @@ public class MentaRay : Creature, IInteractable
         GameManager.instance.PlayIntro().Forget();
     }
 
-    public void Interact() {
+    public async void Interact() {
         GetComponentInChildren<MeshRenderer>().enabled = false;
         GetComponent<Collider>().enabled = false;
         shooter.Add(this);
+        await UniTask.WaitForSeconds(5f);
+
+        GameManager.instance.RespawnRay();
     }
 
     private void OnTriggerEnter(Collider other) {

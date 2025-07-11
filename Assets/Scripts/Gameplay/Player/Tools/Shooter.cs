@@ -64,15 +64,6 @@ public class Shooter : MonoBehaviour
         }
     }
 
-    public void OnCatch(InputAction.CallbackContext context){
-        if (context.started && hittedgameObj)
-        {
-            //stored.Push(hittedgameObj);
-            hittedgameObj.SetActive(false);
-            Debug.Log(hittedgameObj.tag + " catched");
-        }
-    }
-
     public bool Add(Usable usable){
         if(stored.Count == capacity){
             return false;
