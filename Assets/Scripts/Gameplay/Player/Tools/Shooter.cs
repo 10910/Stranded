@@ -78,6 +78,7 @@ public class Shooter : MonoBehaviour
             return false;
         }else{
             Usable top;
+            // hide last fruit in shooter
             if(stored.TryPeek(out top)){
                 if (top.GetComponent<Fruit>()) { 
                     top.GetComponent<Renderer>().enabled = false;

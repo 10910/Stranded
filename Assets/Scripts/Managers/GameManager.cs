@@ -13,9 +13,9 @@ public class GameManager : MonoBehaviour
     public Transform FPSCamera;
     public Shooter shooter;
     public GameObject deathUI;
-    public Transform Player, RespawnPoint, IntroTargetPoint, BigMantaRay, MantaRayTarget, MantaRayTarget2, MantaRayRespawn;
+    public Transform Player, RespawnPoint, IntroTargetPoint, VolcanoBigRay, PeakBigRay, MantaRayTarget, MantaRayTarget2, MantaRayRespawn;
     public List<Transform> spawnPoints;
-    [Range(0, 5)]
+    [Range(0, 10)]
     public int spawnPointIndex;
     public Movement movement;
     public ParticleSystem volcanoBurst;
@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
                 Respawn(idx);
             });
         }
+        PeakBigRay.gameObject.SetActive(false);
     }
 
     public void Respawn(){
@@ -83,24 +84,31 @@ public class GameManager : MonoBehaviour
     }
 
     public async UniTask PlayIntro(){
+        //BigMantaRay.gameObject.SetActive(true);
+        // move up, then move to target
         movement.canMove = false;
         Vector3 Dir = IntroTargetPoint.position - Player.position;
         Dir.y = 0;
         Dir = Dir.normalized;
         Vector3 flyPoint = Player.position + Dir * 2f + Vector3.up * 3f;
         Player.DOMove(flyPoint, 1f).SetEase(Ease.OutCubic).OnComplete(()=>
-            Player.DOMove(IntroTargetPoint.position, 8f).SetEase(Ease.Linear).OnComplete(() => movement.canMove = true)
+            Player.DOMove(IntroTargetPoint.position, 10f).SetEase(Ease.Linear).OnComplete(() => movement.canMove = true)
             );
-        await UniTask.WaitForSeconds(3f);
 
-        volcanoBurst.Play();
-        BigMantaRay.LookAt(MantaRayTarget.position);
-        Sequence seq = DOTween.Sequence();
-        seq.Append(BigMantaRay.DOMove(MantaRayTarget.position, 3f)
-            .SetEase(Ease.Linear));
-        seq.Append(BigMantaRay.DOMove(MantaRayTarget2.position, 2f).SetEase(Ease.Linear));
-        seq.Join(BigMantaRay.DOLocalRotate(new Vector3(85, 0, 0), 2f));
         await UniTask.WaitForSeconds(2f);
+        Sequence seq = DOTween.Sequence();
+        seq.Append(VolcanoBigRay.DOMove(MantaRayTarget.position, 2f).SetEase(Ease.Linear));
+        seq.Join(VolcanoBigRay.DOLocalRotate(new Vector3(0, 270, 0), 2f));
+        //seq.AppendCallback(() => { BigMantaRay.LookAt(SubBigMantaRay.position); });
+        seq.Append(VolcanoBigRay.DOMove(PeakBigRay.position, 10f)
+            .SetEase(Ease.Linear));
+        seq.AppendCallback(() => { VolcanoBigRay.gameObject.SetActive(false);  });
+
+        await UniTask.WaitForSeconds(2f);
+        volcanoBurst.Play();
+
+        await UniTask.WaitForSeconds(11f);
+        PeakBigRay.gameObject.SetActive(true);
 
         Instantiate(MantaRayPrfb).transform.position = MantaRayRespawn.position;
 

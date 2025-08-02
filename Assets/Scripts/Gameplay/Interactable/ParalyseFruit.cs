@@ -42,7 +42,7 @@ public class ParalyseFruit : Usable, IShootable, IInteractable
     }
 
     public void Interact() {
-        gameObject.layer = LayerMask.NameToLayer("Default");
+        gameObject.layer = LayerMask.NameToLayer("Bullet");
         GetComponent<Fruit>().tree.GrowFruit().Forget();
         print("Interact with paralyse fruit");
         //transform.SetParent(FPSCamera, false);
