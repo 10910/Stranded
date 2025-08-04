@@ -10,7 +10,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public Transform FPSCamera;
+    public Transform FPSCamera, HandsCamera;
     public Shooter shooter;
     public GameObject deathUI;
     public Transform Player, RespawnPoint, IntroTargetPoint, VolcanoBigRay, PeakBigRay, MantaRayTarget, MantaRayTarget2, MantaRayRespawn;

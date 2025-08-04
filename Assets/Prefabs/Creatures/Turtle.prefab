@@ -83,7 +83,7 @@ GameObject:
   - component: {fileID: 7650528736747712733}
   - component: {fileID: 2940784669511632017}
   m_Layer: 6
-  m_Name: Turtle (1)
+  m_Name: Turtle
   m_TagString: HighTurtle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

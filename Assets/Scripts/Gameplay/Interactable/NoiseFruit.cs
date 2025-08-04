@@ -14,7 +14,7 @@ public class NoiseFruit : Usable, IInteractable
             rb.useGravity = false;
         }
 
-        gameObject.layer = LayerMask.NameToLayer("Default");
+        gameObject.layer = LayerMask.NameToLayer("Hands");
         GetComponent<Fruit>().tree.GrowFruit().Forget();
         
         GameManager.instance.shooter.Add(this);

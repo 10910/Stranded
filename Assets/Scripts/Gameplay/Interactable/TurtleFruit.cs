@@ -34,7 +34,7 @@ public class TurtleFruit : Usable, IShootable, IInteractable
         Vector3 Forward = FPSCamera.forward;
         print("shoot red fruit");
         transform.SetParent(null);
-        gameObject.layer = LayerMask.NameToLayer("Environment");
+        gameObject.layer = LayerMask.NameToLayer("Bullet");
         var rb = GetComponent<Rigidbody>();
         rb.isKinematic = false;
         rb.velocity = Forward * ShootingVelocity;
@@ -43,7 +43,7 @@ public class TurtleFruit : Usable, IShootable, IInteractable
     }
 
     public void Interact() {
-        gameObject.layer = LayerMask.NameToLayer("Bullet");
+        //gameObject.layer = LayerMask.NameToLayer("Hands");
         GetComponent<Fruit>().tree.GrowFruit().Forget();
         //print("Interact with turtle fruit");
         //transform.SetParent(FPSCamera, false);

@@ -33,6 +33,7 @@ public class ParalyseFruit : Usable, IShootable, IInteractable
     public void Shoot() {
         Vector3 Forward = FPSCamera.forward;
         print("shoot paralyse");
+        gameObject.layer = LayerMask.NameToLayer("Bullet");
         transform.SetParent(null);
         //var rb = GetComponent<Rigidbody>();
         //rb.velocity = Forward * ShootingVelocity;
@@ -42,7 +43,7 @@ public class ParalyseFruit : Usable, IShootable, IInteractable
     }
 
     public void Interact() {
-        gameObject.layer = LayerMask.NameToLayer("Bullet");
+        gameObject.layer = LayerMask.NameToLayer("Hands");
         GetComponent<Fruit>().tree.GrowFruit().Forget();
         print("Interact with paralyse fruit");
         //transform.SetParent(FPSCamera, false);
