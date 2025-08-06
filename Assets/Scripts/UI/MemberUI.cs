@@ -52,7 +52,7 @@ public class MemberUI : MonoBehaviour
         }
     }
     
-    public void UpdateText(string key, string text){
+    public void UpdateMemberInfo(string key, string text){
         memberDict[key].text += text;
     }
 }

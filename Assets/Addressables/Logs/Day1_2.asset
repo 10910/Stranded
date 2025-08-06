@@ -12,12 +12,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bad5fa0116e5ef409745a7fb3daa1aa, type: 3}
   m_Name: Day1_2
   m_EditorClassIdentifier: 
+  l_DisplayTitle:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   title: Day1_2
   displayTitle: Day1_2
-  viewed: 0
+  isViewed: 1
   texts:
   - key: body
     text: "Recorder: All the fuel leaked out during the crash landing\u2026\nCaptain:
       That\u2019s bad.\nAssistant: Captain, the comms are down too!\nCaptain: Oh
       no\u2026 Let me think.\nProfessor: Stay calm. The rover still works \u2014 
       survey the planet first."
+    l_text:
+      m_TableReference:
+        m_TableCollectionName: GUID:a72d5d36c70c87c48b8d0b48c416eaf3
+      m_TableEntryReference:
+        m_KeyId: 779023356071936
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []

@@ -29,10 +29,15 @@ public class Tablet : MonoBehaviour
     }
 
     public void OpenLog(LogTextSO so){
-        // open log page
-        tab.Toggle(2);
-        log.ToggleBySO(so);
+        // ui must be activated before selecting toggle,
+        //  otherwise the color transition won't be updated correctly.
         ToggleUI();
+
+        // toggle log tab
+        tab.Toggle(2);
+        
+        // toggle log page
+        log.ToggleBySO(so);
     }
 
     public void ToggleUI(){

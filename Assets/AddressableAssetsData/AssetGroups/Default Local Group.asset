@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: c4337bca9f53a704fb1d4112dd216baa
+  m_SerializeEntries:
+  - m_GUID: 66c676a134a170f408268e8c11c52dc9
+    m_Address: Assets/Addressables/Logs/FishHint.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Log
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 84b27777a905aca468df203aaef406bf
+    m_Address: Assets/Addressables/Logs/TurtleHint.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Log
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 47c29d29a09ef114bb676d70b63307f5
+    m_Address: Assets/Addressables/Logs/Day2_1.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Log
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3343e395228a15148a16a17ffa1b732e
+    m_Address: Assets/Addressables/Logs/Day1_3.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Log
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 98b45744a8d3b23458f137e54914bc8c
+    m_Address: Assets/Addressables/Logs/Day13_1.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Log
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c27947aff33333d4b8e1d8a1ffb5b1bf
+    m_Address: Assets/Addressables/Logs/Day1_2.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Log
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bb963e4f467594a45bc65414f827489d
+    m_Address: Assets/Addressables/Logs/Cave.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Log
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fffd1c5a47f40f34991464a0d36c8250
+    m_Address: Assets/Addressables/Logs/Day2_2.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Log
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d2f084a1ec0cda84d91811d3f94d555c
+    m_Address: Assets/Addressables/Logs/Final.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Log
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 11c01b2f6c4d8e948a2f7991303166d2
+    m_Address: Assets/Addressables/Logs/RiverHint.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Log
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cccfb02ab41548e4e874d59a3bcb1c4a
+    m_Address: Assets/Addressables/Logs/Day1_1.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Log
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 593b2e6b1a959f24db22a554be9530c3, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: d8db05528ca18f247a57717cd1e9410c, type: 2}
+    - {fileID: 11400000, guid: 74e7e8ab129a0834b9b8ace8ebb86e6b, type: 2}
