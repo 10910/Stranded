@@ -5,16 +5,20 @@ using UnityEngine;
 
 public class Scallop : Creature, IInteractable
 {
-    public string InteractionText { get; set; } = "pick up";
+    public string InteractionText { get; set; }
     public Vector3 rotationAngle;
     public float rotationDuration;
     public Transform jaw;
     public bool isEaten = false;
+    public GameObject log;
     public void Interact() {
-        jaw.gameObject.SetActive(false);
-        GetComponent<MeshRenderer>().enabled = false;
-        GetComponent<Collider>().enabled = false;
-        GameManager.instance.shooter.Add(this);
+        if (isEaten) {
+            jaw.gameObject.SetActive(false);
+            GetComponent<MeshRenderer>().enabled = false;
+            GetComponent<Collider>().enabled = false;
+            GameManager.instance.shooter.Add(this);
+        }
+        
     }
 
     public override void Use() {
@@ -24,6 +28,7 @@ public class Scallop : Creature, IInteractable
     // Start is called before the first frame update
     void Start()
     {
+        log.SetActive(false);
     }
 
     // Update is called once per frame
@@ -35,6 +40,7 @@ public class Scallop : Creature, IInteractable
     public void Eaten(){
         print(name + " is eaten");
         isEaten = true;
+        log.SetActive(true);
         gameObject.layer = LayerMask.NameToLayer("Interactable");
         jaw.DOLocalRotate(jaw.localEulerAngles + rotationAngle, rotationDuration);
     }

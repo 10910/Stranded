@@ -15,7 +15,7 @@ public class Shooter : MonoBehaviour
     public Stack<Usable> stored;
     public TextMeshProUGUI hud;
     public int capacity = 5;
-    public Transform bulletPosition;
+    public Transform bulletPosition, rayPosition;
     // Start is called before the first frame update
     void Start()
     {
@@ -94,6 +94,13 @@ public class Shooter : MonoBehaviour
                 tf.localScale = Vector3.one;
                 //tf.localPosition = new Vector3(0.145f, -0.089f, 0.661f);
                 //tf.localEulerAngles = Vector3.zero;
+            }else if(usable.GetComponent<MentaRay>()) {
+                usable.gameObject.layer = LayerMask.NameToLayer("Hands");
+                Transform tf = usable.transform;
+                tf.SetParent(rayPosition, false);
+                tf.localEulerAngles = Vector3.zero;
+                tf.localPosition = Vector3.zero;
+                tf.localScale = Vector3.one;
             }
             stored.Push(usable);
             UpdateText(usable.name);

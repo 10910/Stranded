@@ -14,7 +14,107 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_TableCollectionName: Log_titles
   m_TableCollectionNameGuidString: b7ada11f58aec654b8f7735513e58143
-  m_Entries: []
+  m_Entries:
+  - m_Id: 5084377984339968
+    m_Key: AssistantFinal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5084469311115264
+    m_Key: AssistantTalk
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5084580095266816
+    m_Key: CaptainFinal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5084837495508992
+    m_Key: Cave
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5084954055217152
+    m_Key: Day1_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5085021856141312
+    m_Key: Day1_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5085085185937408
+    m_Key: Day1_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5085138885611520
+    m_Key: Day2_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5085180564410368
+    m_Key: Day2_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5085222842994688
+    m_Key: Day13_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5085270393819136
+    m_Key: Final
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5085351415189504
+    m_Key: FishHint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5085417932656640
+    m_Key: ProfessorFinal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5085560807428096
+    m_Key: ProfessorTalk
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5085676066902016
+    m_Key: RiverHint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5085774725320704
+    m_Key: Shooter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5085884796440576
+    m_Key: TurtleHint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5094872502046720
+    m_Key: Fish
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5095088789721088
+    m_Key: MantaRay
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5095334630461440
+    m_Key: Noise
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5095388405633024
+    m_Key: Turtle1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5095428977135616
+    m_Key: Turtle2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5095453354430464
+    m_Key: Scallop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5095481288495104
+    m_Key: Piper
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5095512582197248
+    m_Key: Paralyze
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

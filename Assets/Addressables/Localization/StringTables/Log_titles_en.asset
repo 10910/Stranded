@@ -17,7 +17,107 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: b7ada11f58aec654b8f7735513e58143, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 5084469311115264
+    m_Localized: Day6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5084580095266816
+    m_Localized: "Captain\u2019s Final Log"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5084837495508992
+    m_Localized: Day10_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5084954055217152
+    m_Localized: Day1_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5085021856141312
+    m_Localized: Day1_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5085085185937408
+    m_Localized: Day1_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5085138885611520
+    m_Localized: Day2_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5085180564410368
+    m_Localized: Day2_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5085222842994688
+    m_Localized: Day13_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5085270393819136
+    m_Localized: Final
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5085351415189504
+    m_Localized: Day10_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5085417932656640
+    m_Localized: Professor's Research Result
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5085560807428096
+    m_Localized: Day9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5085676066902016
+    m_Localized: Day7_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5085774725320704
+    m_Localized: Shooter Instruction
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5085884796440576
+    m_Localized: Day3_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5084377984339968
+    m_Localized: "Assistant\u2019s Final Log"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5094872502046720
+    m_Localized: Sand Shallowfish
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5095088789721088
+    m_Localized: Sky Manta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5095453354430464
+    m_Localized: Purple Scallop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5095388405633024
+    m_Localized: Longleg Turtle_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5095428977135616
+    m_Localized: Longleg Turtle_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5095512582197248
+    m_Localized: Paralyze Fruit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5095334630461440
+    m_Localized: Ringing Fruit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5095481288495104
+    m_Localized: Piper
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

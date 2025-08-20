@@ -12,6 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bad5fa0116e5ef409745a7fb3daa1aa, type: 3}
   m_Name: Final
   m_EditorClassIdentifier: 
+  l_DisplayTitle:
+    m_TableReference:
+      m_TableCollectionName: GUID:b7ada11f58aec654b8f7735513e58143
+    m_TableEntryReference:
+      m_KeyId: 5085270393819136
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   title: Final
   displayTitle: Day20_1
   isViewed: 0
@@ -29,3 +38,15 @@ MonoBehaviour:
       I just can\u2019t imagine it\u2026 those two seemed worlds apart.\nAssistant:
       The Captain still has feelings for her. Otherwise, he wouldn\u2019t have taken
       such a huge risk piloting this ship."
+    l_text:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []

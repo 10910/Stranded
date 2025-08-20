@@ -12,6 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bad5fa0116e5ef409745a7fb3daa1aa, type: 3}
   m_Name: Day2_1
   m_EditorClassIdentifier: 
+  l_DisplayTitle:
+    m_TableReference:
+      m_TableCollectionName: GUID:b7ada11f58aec654b8f7735513e58143
+    m_TableEntryReference:
+      m_KeyId: 5085138885611520
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   title: Day2_1
   displayTitle: Day2_1
   isViewed: 0
@@ -23,3 +32,15 @@ MonoBehaviour:
       to keep us connected. The ship\u2019s failure was my responsibility. I\u2019ll
       find us fuel.\nRecorder: I\u2019ll sync all your collected data to the log
       system. Don\u2019t forget to check your tablets."
+    l_text:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []

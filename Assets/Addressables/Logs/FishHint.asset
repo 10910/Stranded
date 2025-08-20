@@ -12,9 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bad5fa0116e5ef409745a7fb3daa1aa, type: 3}
   m_Name: FishHint
   m_EditorClassIdentifier: 
+  l_DisplayTitle:
+    m_TableReference:
+      m_TableCollectionName: GUID:b7ada11f58aec654b8f7735513e58143
+    m_TableEntryReference:
+      m_KeyId: 5085351415189504
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   title: FishHint
   displayTitle: Day10_1
-  isViewed: 1
+  isViewed: 0
   texts:
   - key: body
     text: "Assistant: Calling the ship! Calling the ship! Do you copy?\nRecorder:
@@ -31,3 +40,15 @@ MonoBehaviour:
       shell of that scallop by the shore is made of the same material as the turtle\u2019s.\nRecorder:
       And scallop shells are much easier to get.\nAssistant: You\u2019re a genius!
       Thanks for the tip\u2014I\u2019m taking the risk."
+    l_text:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []

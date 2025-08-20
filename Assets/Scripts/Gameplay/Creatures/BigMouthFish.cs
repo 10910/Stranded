@@ -33,7 +33,7 @@ public class BigMouthFish : MonoBehaviour
             var collider = GetComponent<Collider>();
             collider.enabled = false;
             print("catched player" + other.name);
-            Destroy(Bait);
+            Bait.GetComponent<Renderer>().enabled = false;
             //GetComponent<CapsuleCollider>().enabled = false;
             GameManager.instance.movement.canMove = false;
             
@@ -59,6 +59,9 @@ public class BigMouthFish : MonoBehaviour
             transform.position = pos; 
             collider.enabled = true; 
             GameManager.instance.movement.canMove = true;
+
+            await UniTask.WaitForSeconds(1f);
+            Bait.GetComponent<Renderer>().enabled = true;
         }
         if (other.gameObject.layer == LayerMask.NameToLayer("Creature")) {
             print("catched animal");

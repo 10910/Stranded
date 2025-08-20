@@ -12,6 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bad5fa0116e5ef409745a7fb3daa1aa, type: 3}
   m_Name: RiverHint
   m_EditorClassIdentifier: 
+  l_DisplayTitle:
+    m_TableReference:
+      m_TableCollectionName: GUID:b7ada11f58aec654b8f7735513e58143
+    m_TableEntryReference:
+      m_KeyId: 5085676066902016
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   title: RiverHint
   displayTitle: Day7_1
   isViewed: 0
@@ -23,3 +32,15 @@ MonoBehaviour:
       seems harmless to the native creatures. Maybe we can use that to our advantage.\nCaptain:
       The turtle... Haha, I\u2019ve got an idea. Assistant, let\u2019s go back and
       grab some of its favorite fruit.\nAssistant: I get it! The carrot and the stick!"
+    l_text:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []

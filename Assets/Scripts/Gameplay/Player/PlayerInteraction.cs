@@ -41,7 +41,7 @@ public class PlayerInteraction : MonoBehaviour
         promptUI.SetActive(false);
         promptText.setText(null);
         Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
-        if (Physics.SphereCast(ray, sphereRadius, out hit, rayDistance, hitLayerMask)) {
+        if (Physics.SphereCast(ray, sphereRadius, out hit, rayDistance, hitLayerMask) && hit.collider.gameObject.layer == LayerMask.NameToLayer("Interactable")) {
             promptUI.SetActive(true);
             promptText.setText(hit.collider.GetComponent<IInteractable>().InteractionText);
         }

@@ -6,7 +6,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
-
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
@@ -24,15 +25,21 @@ public class GameManager : MonoBehaviour
     public PlayerState playerState;
     public Image blackScreen;
     public GameObject MantaRayPrfb;
+    public LogUI logUI;
 
     public Transform respawnButtons;
     public GameObject respawnPanel;
+    public bool firstGlide = true;
     private void Awake() {
         instance = this;
+        SetLanguage();
+        logUI.LoadResources();
+
     }
 
     private void Start() {
-        if(spawnPointIndex >= spawnPoints.Count){
+
+        if (spawnPointIndex >= spawnPoints.Count){
             throw new System.ArgumentOutOfRangeException("spawnPointIndex");
         }
         //DeathUI.SetActive(false);
@@ -86,32 +93,27 @@ public class GameManager : MonoBehaviour
     public async UniTask PlayIntro(){
         //BigMantaRay.gameObject.SetActive(true);
         // move up, then move to target
-        movement.canMove = false;
-        Vector3 Dir = IntroTargetPoint.position - Player.position;
-        Dir.y = 0;
-        Dir = Dir.normalized;
-        Vector3 flyPoint = Player.position + Dir * 2f + Vector3.up * 3f;
-        Player.DOMove(flyPoint, 1f).SetEase(Ease.OutCubic).OnComplete(()=>
-            Player.DOMove(IntroTargetPoint.position, 10f).SetEase(Ease.Linear).OnComplete(() => movement.canMove = true)
-            );
+        
 
-        await UniTask.WaitForSeconds(2f);
-        Sequence seq = DOTween.Sequence();
-        seq.Append(VolcanoBigRay.DOMove(MantaRayTarget.position, 2f).SetEase(Ease.Linear));
-        seq.Join(VolcanoBigRay.DOLocalRotate(new Vector3(0, 270, 0), 2f));
-        //seq.AppendCallback(() => { BigMantaRay.LookAt(SubBigMantaRay.position); });
-        seq.Append(VolcanoBigRay.DOMove(PeakBigRay.position, 10f)
-            .SetEase(Ease.Linear));
-        seq.AppendCallback(() => { VolcanoBigRay.gameObject.SetActive(false);  });
+        if (firstGlide) {
+            firstGlide = false;
+            await UniTask.WaitForSeconds(2f);
+            Sequence seq = DOTween.Sequence();
+            seq.Append(VolcanoBigRay.DOMove(MantaRayTarget.position, 2f).SetEase(Ease.Linear));
+            seq.Join(VolcanoBigRay.DOLocalRotate(new Vector3(0, 270, 0), 2f));
+            //seq.AppendCallback(() => { BigMantaRay.LookAt(SubBigMantaRay.position); });
+            seq.Append(VolcanoBigRay.DOMove(PeakBigRay.position, 10f)
+                .SetEase(Ease.Linear));
+            seq.AppendCallback(() => { VolcanoBigRay.gameObject.SetActive(false); });
 
-        await UniTask.WaitForSeconds(2f);
-        volcanoBurst.Play();
+            await UniTask.WaitForSeconds(2f);
+            volcanoBurst.Play();
 
-        await UniTask.WaitForSeconds(11f);
-        PeakBigRay.gameObject.SetActive(true);
+            await UniTask.WaitForSeconds(11f);
+            PeakBigRay.gameObject.SetActive(true);
 
-        Instantiate(MantaRayPrfb).transform.position = MantaRayRespawn.position;
-
+            Instantiate(MantaRayPrfb).transform.position = MantaRayRespawn.position;
+        }
     }
 
     public void OnRespawnPanel(InputAction.CallbackContext context) {
@@ -129,5 +131,10 @@ public class GameManager : MonoBehaviour
                 respawnPanel.SetActive(true);
             }
         }
+    }
+
+    public void SetLanguage(){
+        var locale = LocalizationSettings.AvailableLocales.GetLocale("en");
+        LocalizationSettings.SelectedLocale = locale;
     }
 }

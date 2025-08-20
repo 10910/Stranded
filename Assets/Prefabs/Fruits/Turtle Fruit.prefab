@@ -2285,7 +2285,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 504621703418266439}
-  m_Material: {fileID: 13400000, guid: b574fd58adbded047a8774c4f8275921, type: 2}
+  m_Material: {fileID: 13400000, guid: 2a203137032b76c4a825ca751dd9260c, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -2324,7 +2324,7 @@ Rigidbody:
   m_GameObject: {fileID: 504621703418266439}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 1.5
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -2359,4 +2359,4 @@ MonoBehaviour:
   FPSCamera: {fileID: 0}
   Shooter: {fileID: 0}
   ShootingDistance: 30
-  ShootingVelocity: 20
+  ShootingVelocity: 30

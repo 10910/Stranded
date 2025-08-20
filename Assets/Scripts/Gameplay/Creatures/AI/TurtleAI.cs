@@ -75,7 +75,7 @@ public class TurtleAI : MonoBehaviour
         if (agent != null && agent.enabled && agent.hasPath) {
             Gizmos.color = Color.yellow;
 
-            Gizmos.DrawSphere(agent.destination, 0.5f); // 0.5f 是球体的半径，你可以调整它
+            Gizmos.DrawSphere(agent.destination, 0.5f);
         }
 
         Gizmos.color = Color.blue;
@@ -113,12 +113,12 @@ public class TurtleAI : MonoBehaviour
                 currentState = AnimalState.Eat;
                 agent.isStopped = true;
 
-                await UniTask.WaitForSeconds(5f);
+                await UniTask.WaitForSeconds(2f);
                 if (!isCanceled) {
                     Destroy(target.gameObject);
                     if (shouldPrintDebug) print("food eaten, start idling");
                     currentState = AnimalState.Idle;
-                    currentIdleDuration = Random.Range(2f, 3f);
+                    currentIdleDuration = Random.Range(0.5f, 1f);
                     idleTimer = 0f;
                 }
             }
@@ -133,25 +133,6 @@ public class TurtleAI : MonoBehaviour
     void HandleEatState(){
 
     }
-
-    //void HandleFleeState() {
-    //    if (threat != null && agent != null && agent.isOnNavMesh) {
-    //        Vector3 fleeDirection = (transform.position - threat.position).normalized * wanderRadius; // 使用 wanderRadius 作为逃跑距离
-    //        Vector3 fleeTarget = transform.position + fleeDirection;
-    //        NavMeshHit hit;
-    //        if (NavMesh.SamplePosition(fleeTarget, out hit, wanderRadius, NavMesh.AllAreas)) {
-    //            agent.SetDestination(hit.position);
-    //        }
-    //        else {
-    //            // 如果找不到逃跑点，可以尝试随机移动
-    //            SetNewWanderDestination();
-    //        }
-    //    }
-    //    else {
-    //        // 威胁丢失或无法导航，切换回游荡
-    //        currentState = AnimalState.Wander;
-    //    }
-    //}
 
     void HandleIdleState() {
         agent.isStopped = true;
@@ -172,7 +153,7 @@ public class TurtleAI : MonoBehaviour
             isCanceled = false;
             float dest = transform.position.y + height;
             print(dest);
-            transform.DOMoveY(transform.position.y + height+ 0.3f, retreatDuration).SetEase(Ease.Linear).OnComplete(()=>{
+            transform.DOMoveY(transform.position.y + height + 0.3f, retreatDuration).SetEase(Ease.Linear).OnComplete(()=>{
                 agent.updatePosition = true;
                 idleTimer = 0f;
             });
@@ -199,7 +180,7 @@ public class TurtleAI : MonoBehaviour
         float closestDistanceSqr = Mathf.Infinity;
 
         foreach (Collider hitCollider in hitColliders) {
-            if (hitCollider.GetComponent<TurtleFruit>() && hitCollider.gameObject.layer == LayerMask.NameToLayer("Environment")) {
+            if (hitCollider.GetComponent<TurtleFruit>() && hitCollider.gameObject.layer == LayerMask.NameToLayer("Bullet")) {
                 if (shouldPrintDebug) print("found food: " + hitCollider.gameObject.name);
                 float distanceSqr = (transform.position - hitCollider.transform.position).sqrMagnitude;
                 if (distanceSqr < closestDistanceSqr) {

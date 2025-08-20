@@ -12,9 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bad5fa0116e5ef409745a7fb3daa1aa, type: 3}
   m_Name: TurtleHint
   m_EditorClassIdentifier: 
+  l_DisplayTitle:
+    m_TableReference:
+      m_TableCollectionName: GUID:b7ada11f58aec654b8f7735513e58143
+    m_TableEntryReference:
+      m_KeyId: 5085884796440576
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   title: TurtleHint
   displayTitle: Day3_1
-  isViewed: 1
+  isViewed: 0
   texts:
   - key: body
     text: "Professor: This step is too high for us to climb.\nAssistant: And it looks
@@ -25,3 +34,15 @@ MonoBehaviour:
       more than just the aggressive ones...\nProfessor: You\u2019re right. Look over
       there\u2014the turtle. I think we\u2019ve found our way to the platform.\nAssistant:
       That\u2019s not what I meant..."
+    l_text:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []

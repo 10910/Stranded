@@ -66,32 +66,32 @@ public class Goggles : MonoBehaviour
     }
 
     public void OnGoggles(InputAction.CallbackContext context){
-        if(context.started){
-            if (!mask.gameObject.activeSelf)
-            {
-                // open
-                mask.gameObject.SetActive(true);
-                GameManager.instance.crosshair.SetActive(false);
-            }else{
-                // close
-                mask.gameObject.SetActive(false);
-                GameManager.instance.crosshair.SetActive(true);
-            }
-        }
+        //if(context.started){
+        //    if (!mask.gameObject.activeSelf)
+        //    {
+        //        // open
+        //        mask.gameObject.SetActive(true);
+        //        GameManager.instance.crosshair.SetActive(false);
+        //    }else{
+        //        // close
+        //        mask.gameObject.SetActive(false);
+        //        GameManager.instance.crosshair.SetActive(true);
+        //    }
+        //}
     }
 
     public void OnScan(InputAction.CallbackContext context) {
-        if (context.started && _hitCreatureInfo != null && _hitCreatureInfo.discoveredState == DiscoveryState.Undiscovered) {
-            print($"{_hitCreatureInfo.creatureName} scanned");
-            _hitCreatureInfo.discoveredState = DiscoveryState.Completed;
-        }
+        //if (context.started && _hitCreatureInfo != null && _hitCreatureInfo.discoveredState == DiscoveryState.Undiscovered) {
+        //    print($"{_hitCreatureInfo.creatureName} scanned");
+        //    _hitCreatureInfo.discoveredState = DiscoveryState.Completed;
+        //}
     }
 
     public void OnSnap(InputAction.CallbackContext context){
-        if (context.started && _hitCreatureInfo != null) {
-            print($"{_hitCreatureInfo.creatureName} snapped");
-            StartCoroutine(Capture(_hitCreatureInfo));
-        }
+        //if (context.started && _hitCreatureInfo != null) {
+        //    print($"{_hitCreatureInfo.creatureName} snapped");
+        //    StartCoroutine(Capture(_hitCreatureInfo));
+        //}
     }
 
     IEnumerator Capture(CreatureInfoSO info){

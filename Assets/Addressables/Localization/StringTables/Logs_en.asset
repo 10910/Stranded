@@ -66,6 +66,132 @@ MonoBehaviour:
       fuel or find them\u2026\nI have to go."
     m_Metadata:
       m_Items: []
+  - m_Id: 1037353529970688
+    m_Localized: 'Yellow in appearance
+
+      Has a paralyzing effect on small organisms.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1054716409221120
+    m_Localized: Appearance is green, emits a loud noise when struck.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1055946749579264
+    m_Localized: "Its shell is hard and can bear a person\u2019s weight.\nIts shell
+      shares the same origin as the purple scallop's.\nAfraid of loud sounds."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1057724526301184
+    m_Localized: 'Normally extends its head antennae above ground as bait.
+
+      After
+      swallowing prey, it drags them back into its burrow to eat.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1058771495882752
+    m_Localized: 'Afraid of people approaching.
+
+      Can peck open the hard shell
+      of the purple scallop.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1061524708331520
+    m_Localized: 'Its shell can block strong impacts, but no human force can pry
+      it open.
+
+      Eats everything, even what it cannot digest itself.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1068930674790400
+    m_Localized: 'Likes eating red fruits.
+
+      Can cross water surfaces.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1070362505318400
+    m_Localized: Feeds on ringing fruits, temporarily storing food on its antennae.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1072150130266112
+    m_Localized: 'Professor: The ecosystem of this planet is extremely peculiar:
+      creatures have no reproductive ability. All new lifeforms are transformed from
+      corpses by microorganisms in the soil.
+
+      According to this theory, after
+      humans die, they may also become part of this planet in some form.
+
+      I
+      was swallowed by a giant creature and severely injured; I may not live for
+      long.
+
+      I hope this log is preserved well, so that those who come after
+      can see it.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1083335059771392
+    m_Localized: "Assistant: The last bit of food is gone. Looks like this is where
+      it all ends for me, haha.\nAt least I can still stand on high ground to enjoy
+      the view at the very end. Not bad.\nThis land feels so warm\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1193298079846400
+    m_Localized: "Recorder: Professor, I\u2019ve always wondered why you chose her
+      as your assistant. She doesn\u2019t really have any expertise.\nProfessor:
+      Her animal-like instincts are perfect for assisting in fieldwork. Back in the
+      refugee camp, I noticed her uncanny ability to interpret the weather.\nRecorder:
+      She\u2026 was a refugee?\nProfessor: Yes. When I told her I was leaving for
+      somewhere even more dangerous, she grew excited and insisted on coming with
+      me.\nRecorder: As lively as ever.\nProfessor: She once calmly described to
+      me how she witnessed her parents being killed. It seems past suffering left
+      no scars on her. Truly a free spirit."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1202927539130368
+    m_Localized: "[Day 10] This is a dead volcano\u2026 there\u2019s no energy source
+      at all.\nI\u2019m sorry, Professor\u2026 if only I had checked more carefully
+      before departure\u2026\n[Day 11] I think I\u2019m stuck here\u2026\n[Day 13]
+      Professor, I know you parted ways with me because I was too indecisive. But
+      this voyage, I really carried great courage, only to prove it was reckless
+      bravery\u2026\nYou\u2019ll probably say again that I wasn\u2019t calm enough,
+      haha.\nHonestly, just watching you seriously doing research always made me
+      happy. That\u2019s why I agreed to join this journey.\n[Day 16] Maybe ten years,
+      fifty years from now, others will come here with better equipment to explore
+      this planet.\nAfter all, it looks so fascinating.\nTaking my beloved ship on
+      one last flight, dying in the career I love most\u2014there\u2019s nothing
+      bad about that."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1845389085446144
+    m_Localized: 'Your shooter can store up to five items.
+
+
+      Press the left
+      mouse button to use an item.
+
+
+      Item order cannot be switched.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1195878386307072
+    m_Localized: "Assistant: Your government clerk job is actually pretty stable,
+      isn\u2019t it? So why did you join our underfunded ragtag crew?\nRecorder:
+      I admire the Professor. When I was reading through the history of the Alliance,
+      I came across her name.\nYou may not know this, but as the first person to
+      discover a new type of mineral energy, she was once in the spotlight.\nBut
+      soon, the news was all about corporations racing to launch ships to the mineral
+      planet.\nAnd yet, the Professor quietly continued her deep-space explorations,
+      discovering new worlds.\nI think, to her, whether a planet is rich in energy
+      or not doesn\u2019t really matter.\nIt\u2019s not hard to see why the Alliance
+      eventually stopped funding her\u2014her research interests lay elsewhere.\n\nAssistant:
+      When I met her, she was already living so frugally. I never imagined she had
+      once been so renowned!\nShe told me she discovered this planet almost at the
+      same time as the mineral planet, and she had always wanted to investigate it.\nComing
+      here after all these years is like fulfilling a dream for her.\nRecorder: But
+      who could have foreseen things would turn out like this\u2026\nAssistant: Haha,
+      relax. Scientific exploration always comes with risks\u2014someone has to take
+      the first step.\nRecorder: I really envy your optimism\u2026"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

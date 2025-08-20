@@ -9,11 +9,13 @@ public class Tablet : MonoBehaviour
     public CompendiumUI compendiumUI;
     public Tab tab;
     public LogUI log;
+    public GameObject buttons;
     // Start is called before the first frame update
     void Start()
     {
         gameObject.SetActive(false);
         compendiumUI.CreateButtons();
+        buttons.gameObject.SetActive(false);
     }
 
     // Update is called once per frame

@@ -24,8 +24,9 @@ public class PiperAI : MonoBehaviour
     private NavMeshAgent agent;
     private Transform target;
     private Scallop targetScallop;
-    private Vector3 threatDir = Vector3.zero; 
-    private float threatCheckTimer = 0f, threatCheckInterval = 1f;
+    private Vector3 threatDir = Vector3.zero;
+    private float threatCheckTimer = 0f;
+    public float threatCheckInterval = 1f;
 
     void Start() {
         wanderCenter = transform.position;

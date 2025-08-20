@@ -83,6 +83,90 @@ MonoBehaviour:
     m_SerializedLabels:
     - Log
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 970645269c2fa5b4db34e9e19b67cb24
+    m_Address: Assets/Addressables/Logs/Creatures/Scallop.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Log
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b62510122bcfd1d47beeacec0f1ec565
+    m_Address: Assets/Addressables/Logs/Creatures/Paralyze.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Log
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: be870110b471d5443bffe41f31cdbe76
+    m_Address: Assets/Addressables/Logs/Creatures/Noise.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Log
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3ee0d920db3edad4681a6b37675fed61
+    m_Address: Assets/Addressables/Logs/Creatures/Turtle2.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Log
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 77e2bc1603d2c674cadae74776ad2961
+    m_Address: Assets/Addressables/Logs/Creatures/Fish.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Log
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f684061f0b9ada34ab63292b995276cd
+    m_Address: Assets/Addressables/Logs/Creatures/Piper.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Log
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c0b3195ba220aeb44b2ad9deb7c8a64f
+    m_Address: Assets/Addressables/Logs/Creatures/Turtle1.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Log
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 520af2d47bcba37449f9d553bd2224ee
+    m_Address: Assets/Addressables/Logs/Creatures/MantaRay.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Log
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 77e2caa5b4f7c954d835aecbed2f4cb6
+    m_Address: Assets/Addressables/Logs/AssistantFinal.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Log
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 50c660ed45fd19549a57a6406d912e0a
+    m_Address: Assets/Addressables/Logs/AssistantTalk.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Log
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f526f2f0c72f3aa49bdc19caf791549f
+    m_Address: Assets/Addressables/Logs/ProfessorFinal.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Log
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1d5b2cd3016d67a46b9d844582e8dbb5
+    m_Address: Assets/Addressables/Logs/CaptainFinal.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Log
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3476dc497190ea74c9b2751e0ac5d986
+    m_Address: Assets/Addressables/Logs/ProfessorTalk.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Log
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5fa0eb44b0555f54d9f22ba7821a2532
+    m_Address: Assets/Addressables/Logs/Shooter.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Log
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 593b2e6b1a959f24db22a554be9530c3, type: 2}
   m_SchemaSet:
