@@ -24,3 +24,12 @@ There are currently no invisible walls in the game. You may fall outside the map
 
 After being shot down a second time, the Sky Manta will not respawn, and you will have to restart the game.
 
+## Assets ##
+[DOtween](https://github.com/Demigiant/dotween) 
+
+[Unitask](https://github.com/Cysharp/UniTask)
+
+[Low Poly Cliff Pack - Unity Asset Store](https://assetstore.unity.com/packages/3d/environments/landscapes/low-poly-cliff-pack-67289)
+
+[Low-Poly Simple Nature Pack - Unity Asset Store](https://assetstore.unity.com/packages/3d/environments/landscapes/low-poly-simple-nature-pack-162153)
+
