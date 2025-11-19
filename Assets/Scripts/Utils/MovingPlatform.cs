@@ -23,7 +23,7 @@ public class MovingPlatform : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.layer == LayerMask.NameToLayer("Player")) {
             print("player entered moving platform");
-            //other.transform.SetParent(transform);
+            //GameManager.instance.Player.transform.SetParent(transform);
             other.gameObject.GetComponent<Movement>().platform = this;
         }
     }

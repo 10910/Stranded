@@ -134,7 +134,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void SetLanguage(){
-        var locale = LocalizationSettings.AvailableLocales.GetLocale("en");
+        var locale = LocalizationSettings.AvailableLocales.GetLocale("zh-Hans");
         LocalizationSettings.SelectedLocale = locale;
     }
 }

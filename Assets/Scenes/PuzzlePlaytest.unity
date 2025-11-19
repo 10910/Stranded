@@ -31473,7 +31473,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 1
+  orthographic: 0
   orthographic size: 92.2
   m_Depth: 0
   m_CullingMask:
@@ -31498,13 +31498,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 685885128}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 26.2, y: 25.5, z: 16.5}
+  m_LocalRotation: {x: -0, y: -0.7118743, z: -0, w: 0.7023069}
+  m_LocalPosition: {x: 30.4, y: -37.3, z: 41.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90.775, z: 0}
 --- !u!1 &696761355
 GameObject:
   m_ObjectHideFlags: 0
@@ -37898,7 +37898,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!20 &854562282
 Camera:
   m_ObjectHideFlags: 0
@@ -55170,7 +55170,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1270325892
 Transform:
   m_ObjectHideFlags: 0
@@ -55410,22 +55410,6 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: d1a89cb7-80f7-4c7d-b1e4-daa5865939aa
     m_ActionName: 'Player/Shoot[/Mouse/leftButton]'
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1270325900}
-        m_TargetAssemblyTypeName: Shooter, Assembly-CSharp
-        m_MethodName: OnCatch
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 461a81df-6d50-4498-9f1c-4b73e3595719
-    m_ActionName: 'Player/Catch[/Keyboard/e]'
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1270325901}
@@ -101068,6 +101052,7 @@ MonoBehaviour:
   compendiumUI: {fileID: 1030631781}
   tab: {fileID: 487869686}
   log: {fileID: 1773234027}
+  buttons: {fileID: 0}
 --- !u!43 &2032516482
 Mesh:
   m_ObjectHideFlags: 0
@@ -102988,6 +102973,7 @@ MonoBehaviour:
   playerState: {fileID: 1270325903}
   blackScreen: {fileID: 0}
   MantaRayPrfb: {fileID: 4262263218831482864, guid: f724a713b61c8ec468cb53399dc8b3a0, type: 3}
+  logUI: {fileID: 0}
   respawnButtons: {fileID: 516199071}
   respawnPanel: {fileID: 836158724}
   firstGlide: 1
