@@ -10,31 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6bad5fa0116e5ef409745a7fb3daa1aa, type: 3}
-  m_Name: ProfessorFinal
+  m_Name: ResearchResult1
   m_EditorClassIdentifier: 
   l_DisplayTitle:
     m_TableReference:
       m_TableCollectionName: GUID:b7ada11f58aec654b8f7735513e58143
     m_TableEntryReference:
-      m_KeyId: 5085417932656640
+      m_KeyId: 39046944876204032
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  title: Day13_1
-  displayTitle: Day13_1
+  title: ProfessorFinal
+  displayTitle: "\u8C03\u67E5\u7ED3\u679C"
   isViewed: 0
   isStarter: 0
   texts:
   - key: body
-    text: "Recorder: Captain, the assistant, and the professor have been out of contact
-      for five days.\nOnly one week's worth of food left. Whether I find fuel or
-      find them\u2026\nI have to go."
+    text: 
     l_text:
       m_TableReference:
         m_TableCollectionName: GUID:a72d5d36c70c87c48b8d0b48c416eaf3
       m_TableEntryReference:
-        m_KeyId: 39823719940034560
+        m_KeyId: 1072150130266112
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0

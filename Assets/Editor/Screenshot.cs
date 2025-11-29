@@ -20,7 +20,7 @@ public class ScreenshotToolbarButton : EditorToolbarButton
         string path = EditorUtility.SaveFilePanel(
             "保存截图",
             "",
-            "screenshot.png",
+            "screenshot.png" ,
             "png"
         );
 

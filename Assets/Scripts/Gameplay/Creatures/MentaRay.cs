@@ -21,15 +21,23 @@ public class MentaRay : Creature, IInteractable
         shooter = GameManager.instance.shooter;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    
+    IEnumerator CheckSelf(){
+        yield return new WaitForSeconds(5f);
         
+        if (GetComponent<Collider>().enabled) {
+            GetComponent<Rigidbody>().useGravity = false;
+            GetComponent<Collider>().enabled = false;
+            transform.DOMoveY(transform.position.y - 1, 1f).SetEase(Ease.Linear).OnComplete(()=>{
+                Instantiate(GameManager.instance.MantaRayPrfb).transform.position = GameManager.instance.MantaRayRespawn.position;
+                Destroy(gameObject);
+            });
+        }
     }
 
     public override void Use()
     {
-        Debug.Log("mentaRay.use()");
+        Debug.Log("use manta ray");
         GameManager.instance.movement.canMove = false;
         Vector3 Dir = GameManager.instance.IntroTargetPoint.position - GameManager.instance.Player.position;
         Dir.y = 0;
@@ -39,6 +47,7 @@ public class MentaRay : Creature, IInteractable
              GameManager.instance.Player.DOMove(GameManager.instance.IntroTargetPoint.position, 10f).SetEase(Ease.Linear).OnComplete(() => {
                  GameManager.instance.movement.canMove = true;
                  Destroy(gameObject);
+                 Instantiate(GameManager.instance.MantaRayPrfb).transform.position = GameManager.instance.MantaRayRespawn.position;
              })
             );
         GameManager.instance.PlayIntro().Forget();
@@ -70,6 +79,7 @@ public class MentaRay : Creature, IInteractable
             Destroy(ai);
             Destroy(other.gameObject);
             gameObject.layer = LayerMask.NameToLayer("Interactable");
+            StartCoroutine(CheckSelf());
         }
     }
 }

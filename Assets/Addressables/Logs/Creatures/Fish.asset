@@ -24,6 +24,7 @@ MonoBehaviour:
   title: Fish
   displayTitle: "\u6C99\u6D45\u9C7C"
   isViewed: 0
+  isStarter: 0
   texts:
   - key: body
     text: 

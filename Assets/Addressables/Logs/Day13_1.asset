@@ -16,7 +16,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:b7ada11f58aec654b8f7735513e58143
     m_TableEntryReference:
-      m_KeyId: 5085222842994688
+      m_KeyId: 38972136821952512
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -24,6 +24,7 @@ MonoBehaviour:
   title: Day13_1
   displayTitle: Day13_1
   isViewed: 0
+  isStarter: 1
   texts:
   - key: body
     text: "Recorder: Captain, the assistant, and the professor have been out of contact

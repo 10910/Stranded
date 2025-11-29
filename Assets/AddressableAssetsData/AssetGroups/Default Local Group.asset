@@ -17,24 +17,6 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: c4337bca9f53a704fb1d4112dd216baa
   m_SerializeEntries:
-  - m_GUID: 66c676a134a170f408268e8c11c52dc9
-    m_Address: Assets/Addressables/Logs/FishHint.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Log
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 84b27777a905aca468df203aaef406bf
-    m_Address: Assets/Addressables/Logs/TurtleHint.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Log
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 47c29d29a09ef114bb676d70b63307f5
-    m_Address: Assets/Addressables/Logs/Day2_1.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Log
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3343e395228a15148a16a17ffa1b732e
     m_Address: Assets/Addressables/Logs/Day1_3.asset
     m_ReadOnly: 0
@@ -53,26 +35,8 @@ MonoBehaviour:
     m_SerializedLabels:
     - Log
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: bb963e4f467594a45bc65414f827489d
-    m_Address: Assets/Addressables/Logs/Cave.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Log
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: fffd1c5a47f40f34991464a0d36c8250
     m_Address: Assets/Addressables/Logs/Day2_2.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Log
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d2f084a1ec0cda84d91811d3f94d555c
-    m_Address: Assets/Addressables/Logs/Final.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Log
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 11c01b2f6c4d8e948a2f7991303166d2
-    m_Address: Assets/Addressables/Logs/RiverHint.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - Log
@@ -161,8 +125,32 @@ MonoBehaviour:
     m_SerializedLabels:
     - Log
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 5fa0eb44b0555f54d9f22ba7821a2532
-    m_Address: Assets/Addressables/Logs/Shooter.asset
+  - m_GUID: bc72a94b2951bdb4489ce6618842e59a
+    m_Address: Assets/Addressables/Logs/Day8_2.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Log
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f49db422f2be3d84384dc8d38c8a9e45
+    m_Address: Assets/Addressables/Logs/Day8_4.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Log
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 58854d4a70ed6a04eb5b37185c3a215b
+    m_Address: Assets/Addressables/Logs/Day8_3.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Log
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f0a05c36fbc21524a94a47f595fd1eae
+    m_Address: Assets/Addressables/Logs/ProfessorFinal2.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Log
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fe19ab71a29701b46961beb4c22bbb5b
+    m_Address: Assets/Addressables/Logs/ResearchResult2.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - Log

@@ -16,6 +16,8 @@ public class Tablet : MonoBehaviour
         gameObject.SetActive(false);
         compendiumUI.CreateButtons();
         buttons.gameObject.SetActive(false);
+        tab.Toggle(2);
+
     }
 
     // Update is called once per frame

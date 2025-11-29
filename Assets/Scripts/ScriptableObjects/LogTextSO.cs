@@ -18,11 +18,11 @@ public class LogTextSO : ScriptableObject
     public LocalizedString l_DisplayTitle;
     public string title;
     public string displayTitle;
-    public bool isViewed;
+    public bool isViewed, isStarter;
     public List<textEntry> texts;
     public Dictionary<string, LocalizedString> entries;
     private void OnEnable() {
-        title = name;
+        //title = name;
         //displayTitle = name;
         entries = new Dictionary<string, LocalizedString>();
         foreach (var text in texts) {

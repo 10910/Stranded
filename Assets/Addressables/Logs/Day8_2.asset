@@ -10,48 +10,40 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6bad5fa0116e5ef409745a7fb3daa1aa, type: 3}
-  m_Name: ProfessorFinal
+  m_Name: Day8_2
   m_EditorClassIdentifier: 
   l_DisplayTitle:
     m_TableReference:
       m_TableCollectionName: GUID:b7ada11f58aec654b8f7735513e58143
     m_TableEntryReference:
-      m_KeyId: 5085417932656640
+      m_KeyId: 5085180564410368
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  title: Day13_1
-  displayTitle: Day13_1
+  title: Day8_2
+  displayTitle: Day1_3
   isViewed: 0
   isStarter: 0
   texts:
   - key: body
-    text: "Recorder: Captain, the assistant, and the professor have been out of contact
-      for five days.\nOnly one week's worth of food left. Whether I find fuel or
-      find them\u2026\nI have to go."
+    text: "Captain: There's an energy reading near the volcano. I\u2019ll head there.
+      You all continue your assigned tasks.\nAssistant: It\u2019s too dangerous to
+      go alone!\nProfessor: No objections from me.\nCaptain: We still have the recorder
+      to keep us connected. The ship\u2019s failure was my responsibility. I\u2019ll
+      find us fuel.\nRecorder: I\u2019ll sync all your collected data to the log
+      system. Don\u2019t forget to check your tablets."
     l_text:
       m_TableReference:
         m_TableCollectionName: GUID:a72d5d36c70c87c48b8d0b48c416eaf3
       m_TableEntryReference:
-        m_KeyId: 39823719940034560
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
-  - key: Recorder
-    text: Now preparing to search for the missing crew.
-    l_text:
-      m_TableReference:
-        m_TableCollectionName: 
-      m_TableEntryReference:
-        m_KeyId: 0
+        m_KeyId: 816514016546816
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
   - key: Captain
-    text: Currently missing.
+    text: Went alone to investigate the volcano.
     l_text:
       m_TableReference:
         m_TableCollectionName: 
@@ -61,8 +53,8 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-  - key: Assistant
-    text: Missing since Day 13.
+  - key: Recorder
+    text: 'After the crash, I stayed on the ship to handle communications. '
     l_text:
       m_TableReference:
         m_TableCollectionName: 
@@ -73,7 +65,18 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
   - key: Professor
-    text: Missing since Day 13.
+    text: Went on a field expedition with the assistant.
+    l_text:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - key: Assistant
+    text: Participated in the field expedition with the professor.
     l_text:
       m_TableReference:
         m_TableCollectionName: 

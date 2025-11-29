@@ -10,20 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6bad5fa0116e5ef409745a7fb3daa1aa, type: 3}
-  m_Name: Day1_3
+  m_Name: Day8_3
   m_EditorClassIdentifier: 
   l_DisplayTitle:
     m_TableReference:
       m_TableCollectionName: GUID:b7ada11f58aec654b8f7735513e58143
     m_TableEntryReference:
-      m_KeyId: 5085085185937408
+      m_KeyId: 5085222842994688
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  title: Day1_3
+  title: Day8_3
   displayTitle: Day1_3
-  isViewed: 0
+  isViewed: 1
+  isStarter: 0
   texts:
   - key: body
     text: "Captain: There's an energy reading near the volcano. I\u2019ll head there.
@@ -36,7 +37,7 @@ MonoBehaviour:
       m_TableReference:
         m_TableCollectionName: GUID:a72d5d36c70c87c48b8d0b48c416eaf3
       m_TableEntryReference:
-        m_KeyId: 816514016546816
+        m_KeyId: 39731447726673920
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0

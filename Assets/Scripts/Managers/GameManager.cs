@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     public LogUI logUI;
 
     public Transform respawnButtons;
-    public GameObject respawnPanel;
+    public GameObject respawnPanel, menuPanel;
     public bool firstGlide = true;
     private void Awake() {
         instance = this;
@@ -46,8 +46,15 @@ public class GameManager : MonoBehaviour
         Player.position = spawnPoints[spawnPointIndex].position;
         //PlayIntro().Forget();
         for(int i = 0; i < spawnPoints.Count; i++){
-            respawnButtons.GetChild(i).GetComponentInChildren<TextMeshProUGUI>().text = spawnPoints[i].name;
+            Transform buttonTf = respawnButtons.GetChild(i);
+            RespawnPoint rp = spawnPoints[i].GetComponentInChildren<RespawnPoint>();
+            buttonTf.GetComponentInChildren<TextMeshProUGUI>().text
+                = rp.lName.GetLocalizedString();
+            buttonTf.gameObject.SetActive(rp.isStarter);
+            rp.index = i;
+
             int idx = i;
+
             respawnButtons.GetChild(i).GetComponent<Button>().onClick.AddListener(() =>
             {
                 respawnPanel.SetActive(false);
@@ -55,6 +62,10 @@ public class GameManager : MonoBehaviour
             });
         }
         PeakBigRay.gameObject.SetActive(false);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        Time.timeScale = 0;
+        menuPanel.SetActive(true);
     }
 
     public void Respawn(){
@@ -112,7 +123,7 @@ public class GameManager : MonoBehaviour
             await UniTask.WaitForSeconds(11f);
             PeakBigRay.gameObject.SetActive(true);
 
-            Instantiate(MantaRayPrfb).transform.position = MantaRayRespawn.position;
+            //Instantiate(MantaRayPrfb).transform.position = MantaRayRespawn.position;
         }
     }
 
@@ -133,8 +144,34 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void OnMenu(InputAction.CallbackContext context) {
+        if (context.started) {
+            if (menuPanel.activeSelf) {
+                CloseMenu();
+            }
+            else {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+                Time.timeScale = 0;
+                menuPanel.SetActive(true);
+            }
+        }
+    }
+    public void CloseMenu() {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        Time.timeScale = 1;
+        menuPanel.SetActive(false);
+    }
+
+    public void Exit() {
+        Application.Quit();
+    }
+
     public void SetLanguage(){
         var locale = LocalizationSettings.AvailableLocales.GetLocale("zh-Hans");
         LocalizationSettings.SelectedLocale = locale;
     }
+
+
 }

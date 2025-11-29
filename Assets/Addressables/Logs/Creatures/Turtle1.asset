@@ -24,6 +24,7 @@ MonoBehaviour:
   title: Turtle1
   displayTitle: "\u9AD8\u811A\u9F9F_1"
   isViewed: 0
+  isStarter: 0
   texts:
   - key: body
     text: 

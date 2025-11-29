@@ -24,6 +24,7 @@ MonoBehaviour:
   title: Paralyze
   displayTitle: "\u9EBB\u9189\u679C"
   isViewed: 0
+  isStarter: 0
   texts:
   - key: body
     text: 

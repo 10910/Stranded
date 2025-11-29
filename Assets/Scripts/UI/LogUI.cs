@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.UI;
+using static Unity.IO.LowLevel.Unsafe.AsyncReadManagerMetrics;
 
 public class LogUI : MonoBehaviour
 {
@@ -33,7 +34,7 @@ public class LogUI : MonoBehaviour
         GameObject instance = Instantiate(contentPrfb, content);
         print(logSO.l_DisplayTitle.GetLocalizedString());
         instance.GetComponentInChildren<TextMeshProUGUI>().text = logSO.l_DisplayTitle.GetLocalizedString();
-        instance.SetActive(false);
+        instance.SetActive(logSO.isStarter);
         Toggle toggle = instance.GetComponent<Toggle>();
         toggle.group = toggleGroup;
         toggle.onValueChanged.AddListener((isOn) =>
@@ -42,25 +43,24 @@ public class LogUI : MonoBehaviour
                 logBody.text = logSO.entries["body"].GetLocalizedString();
             }
         });
-        toggleDict.Add(logSO.title, toggle);
-        //Debug.Log("toggle created");
-        //print("dict size:" + toggleDict.Count);
-
+        toggleDict.Add(logSO.l_DisplayTitle.GetLocalizedString(), toggle);
+        
     }
 
     public void ToggleBySO(LogTextSO so){
-        if(!so.isViewed){
+        string title = so.l_DisplayTitle.GetLocalizedString();
+        if (!so.isViewed){
             // first time view, display toggle UI and select it
             so.isViewed = true;
-            toggleDict[so.title].gameObject.SetActive(true);
+            toggleDict[title].gameObject.SetActive(true);
             foreach (var entry in so.entries) { 
                 if(entry.Key != "body"){
                     //member.UpdateMemberInfo(entry.Key, entry.Value.GetLocalizedString());
                 }
             }
         }
-        toggleDict[so.title].isOn = true;
-        toggleDict[so.title].Select();
+        toggleDict[title].isOn = true;
+        toggleDict[title].Select();
         //LayoutRebuilder.ForceRebuildLayoutImmediate(toggleDict[so].transform.parent as RectTransform);
     }
 

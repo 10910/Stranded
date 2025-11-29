@@ -24,6 +24,7 @@ MonoBehaviour:
   title: AssistantFinal
   displayTitle: "\u52A9\u624B\u7559\u8A00"
   isViewed: 0
+  isStarter: 0
   texts:
   - key: body
     text: 

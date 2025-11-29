@@ -10,31 +10,37 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6bad5fa0116e5ef409745a7fb3daa1aa, type: 3}
-  m_Name: Day1_2
+  m_Name: Day7
   m_EditorClassIdentifier: 
   l_DisplayTitle:
     m_TableReference:
       m_TableCollectionName: GUID:b7ada11f58aec654b8f7735513e58143
     m_TableEntryReference:
-      m_KeyId: 5085021856141312
+      m_KeyId: 5085085185937408
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  title: Day1_2
-  displayTitle: Day1_2
+  title: Day7
+  displayTitle: Day6_3
   isViewed: 0
+  isStarter: 0
   texts:
   - key: body
-    text: "Recorder: All the fuel leaked out during the crash landing\u2026\nCaptain:
-      That\u2019s bad.\nAssistant: Captain, the comms are down too!\nCaptain: Oh
-      no\u2026 Let me think.\nProfessor: Stay calm. The rover still works \u2014 
-      survey the planet first."
+    text: "Assistant: Wow, look at those things flying in the sky!\nProfessor: Please
+      take a photo for the record.\nAssistant: Got it! I wish I could float around
+      in the air like them\u2026\nProfessor: Alright, calm down. Let\u2019s assess
+      our current situation: we need to find a way down the cliff.\nRecorder: Professor,
+      can you hear me?\nProfessor: Go ahead.\nRecorder: The captain told me earlier
+      how to get down. It involves using those... things in the sky.\nRecorder: 
+      First, you need to find some yellow fruit nearby, and then\u2026\nProfessor:
+      No need to say more\u2014I know what to do. That guy sure has an imagination.\nAssistant:
+      The gravity here feels about the same as New Earth. So boring!"
     l_text:
       m_TableReference:
         m_TableCollectionName: GUID:a72d5d36c70c87c48b8d0b48c416eaf3
       m_TableEntryReference:
-        m_KeyId: 779023356071936
+        m_KeyId: 9953128026112
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0

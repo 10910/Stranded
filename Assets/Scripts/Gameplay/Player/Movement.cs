@@ -48,8 +48,7 @@ public class Movement : MonoBehaviour
         canMove = true;
         canLook = true;
         standMesh = GetComponent<MeshRenderer>();
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+
     }
 
     void Update() {

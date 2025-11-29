@@ -24,6 +24,7 @@ MonoBehaviour:
   title: Scallop
   displayTitle: "\u7D2B\u8D1D"
   isViewed: 0
+  isStarter: 0
   texts:
   - key: body
     text: 

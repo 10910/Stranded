@@ -14,7 +14,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_TableCollectionName: RespawnPoints
   m_TableCollectionNameGuidString: b0fbaa941c79b85459391167c589617d
-  m_Entries: []
+  m_Entries:
+  - m_Id: 2631285535739904
+    m_Key: Start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2632380014202880
+    m_Key: LowerCave
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2633678151290880
+    m_Key: Stage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2634100475760640
+    m_Key: Beach
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2634418043293696
+    m_Key: Cliff
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2635035973324800
+    m_Key: UpperCave
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2635216458420224
+    m_Key: Peak
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2635608571318272
+    m_Key: PeakEntry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2635765585088512
+    m_Key: Volcano
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2636408668360704
+    m_Key: Forest
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2636512313806848
+    m_Key: Riverside
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

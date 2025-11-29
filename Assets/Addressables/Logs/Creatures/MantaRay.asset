@@ -24,6 +24,7 @@ MonoBehaviour:
   title: MantaRay
   displayTitle: "\u98DE\u8F90\u9CBC"
   isViewed: 0
+  isStarter: 0
   texts:
   - key: body
     text: 

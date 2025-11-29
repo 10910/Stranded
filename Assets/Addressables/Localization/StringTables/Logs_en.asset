@@ -18,14 +18,6 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 9634889404416
-    m_Localized: "Assistant: Oh wow, I actually made it out alive.\nRecorder: Did
-      you find the Professor?\nAssistant: Unfortunately... no.\nAssistant: Looks
-      like I was taken to the fish\u2019s lair. It couldn\u2019t digest this hard
-      shell, so it spat me out.\nRecorder: That\u2019s incredible... Can you guess
-      where you are now?"
-    m_Metadata:
-      m_Items: []
   - m_Id: 9953128026112
     m_Localized: "Assistant: Wow, look at those things flying in the sky!\nProfessor:
       Please take a photo for the record.\nAssistant: Got it! I wish I could float
